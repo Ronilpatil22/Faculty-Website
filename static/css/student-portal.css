@@ -1,0 +1,355 @@
+.student-portal-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+.student-portal-navbar-container {
+  width: 100%;
+  display: flex;
+  z-index: 100;
+  position: fixed;
+  box-shadow: 5px 5px 10px 0px #d4d4d4;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--dl-color-gray-white);
+}
+.student-portal-navbar {
+  width: 100%;
+  display: flex;
+  max-width: var(--dl-size-size-maxcontent);
+  align-items: center;
+  padding-top: var(--dl-space-space-tripleunit);
+  padding-left: var(--dl-space-space-tripleunit);
+  padding-right: var(--dl-space-space-tripleunit);
+  flex-direction: row;
+  padding-bottom: var(--dl-space-space-tripleunit);
+  justify-content: space-between;
+}
+.student-portal-navlink {
+  display: contents;
+}
+.student-portal-image {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  text-decoration: none;
+}
+.student-portal-links-container {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+}
+.student-portal-link {
+  margin-right: var(--dl-space-space-tripleunit);
+  text-decoration: none;
+}
+.student-portal-link01 {
+  margin-right: var(--dl-space-space-tripleunit);
+  text-decoration: none;
+}
+.student-portal-link02 {
+  margin-right: var(--dl-space-space-tripleunit);
+  text-decoration: none;
+}
+.student-portal-link03 {
+  margin-right: var(--dl-space-space-tripleunit);
+  text-decoration: none;
+}
+.student-portal-link04 {
+  margin-right: var(--dl-space-space-tripleunit);
+  text-decoration: none;
+}
+.student-portal-link05 {
+  text-decoration: none;
+}
+.student-portal-burger-menu {
+  display: none;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.student-portal-icon {
+  width: 36px;
+  height: 36px;
+}
+.student-portal-mobile-menu {
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100vh;
+  display: none;
+  padding: var(--dl-space-space-tripleunit);
+  position: absolute;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: #fff;
+}
+.student-portal-container1 {
+  flex: 0 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--dl-space-space-doubleunit);
+  flex-direction: row;
+  justify-content: space-between;
+}
+.student-portal-close-menu {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.student-portal-icon02 {
+  width: 24px;
+  height: 24px;
+}
+.student-portal-links-container1 {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.student-portal-link06 {
+  margin-bottom: var(--dl-space-space-unit);
+}
+.student-portal-link07 {
+  margin-bottom: var(--dl-space-space-unit);
+}
+.student-portal-link08 {
+  margin-bottom: var(--dl-space-space-unit);
+}
+.student-portal-section-separator {
+  width: 100%;
+  height: 1px;
+  display: flex;
+  margin-top: var(--dl-space-space-tenunits);
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: var(--dl-color-gray-900);
+}
+.student-portal-hero {
+  width: 100%;
+  height: 664px;
+  display: flex;
+  padding: 48px;
+  position: relative;
+  min-height: 80vh;
+  align-items: center;
+  flex-direction: column;
+  background-size: cover;
+  justify-content: center;
+  background-image: linear-gradient(113.8deg, rgba(255, 76, 92, 0.8) 7.5%, rgba(255, 177, 70, 0.8) 94.47%),url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDIzfHx3b3JrJTIwbGFwdG9wfGVufDB8fHx8MTYyNjE3NjkzMA&ixlib=rb-1.2.1&w=1500');
+}
+.student-portal-text {
+  color: var(--dl-color-gray-white);
+  font-size: 3rem;
+}
+.student-portal-text1 {
+  color: var(--dl-color-gray-white);
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+.student-portal-btn-group {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.student-portal-button {
+  font-size: 0.75rem;
+  transition: 0.3s;
+  padding-top: var(--dl-space-space-unit);
+  border-width: 0px;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-bottom: var(--dl-space-space-unit);
+  text-transform: uppercase;
+}
+.student-portal-button:hover {
+  transform: scale(1.02);
+}
+.student-portal-button1 {
+  color: var(--dl-color-gray-white);
+  font-size: 0.75rem;
+  transition: 0.3s;
+  margin-left: var(--dl-space-space-unit);
+  padding-top: var(--dl-space-space-unit);
+  border-color: var(--dl-color-gray-white);
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-bottom: var(--dl-space-space-unit);
+  text-transform: uppercase;
+  background-color: transparent;
+}
+.student-portal-button1:hover {
+  transform: scale(1.02);
+}
+.student-portal-footer-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--dl-color-gray-white);
+}
+.student-portal-social-bar {
+  width: 100%;
+  display: flex;
+  padding: 48px;
+  justify-content: center;
+}
+.student-portal-link10 {
+  display: contents;
+}
+.student-portal-image1 {
+  width: 16px;
+  height: 16px;
+  object-fit: cover;
+  text-decoration: none;
+}
+.student-portal-icon04 {
+  width: 16px;
+  height: 16px;
+  margin-left: var(--dl-space-space-fourunits);
+  margin-right: 32px;
+}
+.student-portal-icon06 {
+  width: 16px;
+  height: 16px;
+  margin-right: 32px;
+}
+.student-portal-icon08 {
+  width: 16px;
+  height: 16px;
+  margin-right: 32px;
+}
+.student-portal-icon10 {
+  width: 16px;
+  height: 16px;
+  margin-right: var(--dl-space-space-fourunits);
+}
+.student-portal-icon12 {
+  width: 16px;
+  height: 16px;
+  margin-right: 32px;
+}
+.student-portal-icon14 {
+  width: 16px;
+  height: 16px;
+}
+.student-portal-section-separator1 {
+  width: 100%;
+  border: 2px dashed rgba(120, 120, 120, 0.4);
+  height: 1px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: var(--dl-color-gray-900);
+}
+.student-portal-footer {
+  width: 100%;
+  display: flex;
+  max-width: var(--dl-size-size-maxcontent);
+  align-items: center;
+  padding-top: var(--dl-space-space-tripleunit);
+  padding-left: var(--dl-space-space-tripleunit);
+  padding-right: var(--dl-space-space-tripleunit);
+  flex-direction: row;
+  padding-bottom: var(--dl-space-space-tripleunit);
+  justify-content: space-between;
+}
+.student-portal-container2 {
+  flex: 0 0 auto;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: space-between;
+  flex-direction: column;
+}
+.student-portal-copyright-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.student-portal-icon16 {
+  width: 24px;
+  height: 24px;
+  margin-right: var(--dl-space-space-doubleunit);
+}
+@media(max-width: 991px) {
+  .student-portal-heading {
+    text-align: center;
+  }
+  .student-portal-hero {
+    flex-direction: column;
+  }
+  .student-portal-text {
+    text-align: center;
+  }
+  .student-portal-text1 {
+    text-align: center;
+  }
+}
+@media(max-width: 767px) {
+  .student-portal-navbar {
+    position: relative;
+  }
+  .student-portal-links-container {
+    display: none;
+  }
+  .student-portal-burger-menu {
+    display: flex;
+    padding: var(--dl-space-space-halfunit);
+    margin-left: var(--dl-space-space-tripleunit);
+    border-radius: var(--dl-radius-radius-radius4);
+    background-color: var(--dl-color-gray-black);
+  }
+  .student-portal-icon {
+    fill: var(--dl-color-gray-white);
+  }
+  .student-portal-hero {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  .student-portal-social-bar {
+    padding-top: var(--dl-space-space-fourunits);
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-bottom: var(--dl-space-space-fourunits);
+  }
+  .student-portal-image1 {
+    width: 16px;
+    height: 16px;
+    margin-right: var(--dl-space-space-tenunits);
+  }
+}
+@media(max-width: 479px) {
+  .student-portal-image {
+    width: 50px;
+    height: 50px;
+  }
+  .student-portal-burger-menu {
+    margin-left: var(--dl-space-space-doubleunit);
+  }
+  .student-portal-hero {
+    width: 100%;
+    padding: 32px;
+    padding-top: 32px;
+    padding-left: var(--dl-space-space-unit);
+    padding-right: var(--dl-space-space-unit);
+  }
+  .student-portal-btn-group {
+    flex-direction: column;
+  }
+  .student-portal-button1 {
+    margin-top: var(--dl-space-space-unit);
+    margin-left: 0px;
+  }
+  .student-portal-social-bar {
+    padding-top: 32px;
+    padding-left: var(--dl-space-space-unit);
+    padding-right: var(--dl-space-space-unit);
+    padding-bottom: 32px;
+  }
+}
