@@ -601,6 +601,7 @@
   display: flex;
   padding: 48px;
   justify-content: center;
+  background-color: lightgray;
 }
 .home-link10 {
   display: contents;

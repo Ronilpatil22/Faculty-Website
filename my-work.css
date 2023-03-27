@@ -604,6 +604,7 @@
   display: flex;
   padding: 48px;
   justify-content: center;
+  background-color: lightgray;
 }
 .my-work-link10 {
   display: contents;

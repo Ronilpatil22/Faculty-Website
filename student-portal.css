@@ -198,6 +198,7 @@
   display: flex;
   padding: 48px;
   justify-content: center;
+  background-color: lightgray;
 }
 .student-portal-link10 {
   display: contents;

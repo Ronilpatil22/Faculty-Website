@@ -359,6 +359,7 @@
     padding-left: 32px;
     padding-right: 32px;
     padding-bottom: var(--dl-space-space-fourunits);
+    background-color: lightgray;
   }
   .discussion-image2 {
     width: 16px;
