@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style (2).css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/29.1.0/classic/ckeditor.js"></script>
+    <style data-tag="reset-style-sheet">
+        html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+      </style>
+      <style data-tag="default-style-sheet">
+        html {
+          font-family: Arial;
+          font-size: 16px;
+        }
+  
+        body {
+          font-weight: 400;
+          font-style:normal;
+          text-decoration: none;
+          text-transform: none;
+          letter-spacing: normal;
+          line-height: 1.55;
+          color: var(--dl-color-gray-black);
+          background-color: var(--dl-color-gray-white);
+  
+        }
+      </style>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&amp;display=swap"
+        data-tag="font"
+      />
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        <div>
+            <link href="./home.css" rel="stylesheet" />
+      
+            <div class="home-container">
+              <div data-role="Header" class="home-navbar-container">
+                <div class="home-navbar">
+                  <a href="index.html" class="home-navlink">
+                    <img
+                      alt="image"
+                      src="public/playground_assets/download-200w.jpeg"
+                      class="home-image"
+                    />
+                  </a>
+                  <div class="home-links-container">
+                    <a href="index.html" class="home-link02 Navbar-Link">
+                      Home
+                    </a>
+                    <a href="research-group.html" class="home-link02 Navbar-Link">
+                      Research Group
+                    </a>
+                    <a href="student-portal.html" class="home-link03 Navbar-Link">
+                      Students Portal
+                    </a>
+                    <a href="qna_template/disussion.html" class="home-link04 Navbar-Link">
+                      Discussion Board
+                    </a>
+                    <a href="contact.html" class="home-link05 Navbar-Link">Contact</a>
+                  </div>
+                  <div data-role="BurgerMenu" class="home-burger-menu">
+                    <svg viewBox="0 0 1024 1024" class="home-icon">
+                      <path
+                        d="M128 256h768v86h-768v-86zM128 554v-84h768v84h-768zM128 768v-86h768v86h-768z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div data-role="MobileMenu" class="home-mobile-menu">
+                    <div class="home-container1">
+                      <span class="Card-Heading home-heading">Logo</span>
+                      <div data-role="CloseMobileMenu" class="home-close-menu">
+                        <svg viewBox="0 0 1024 1024" class="home-icon02">
+                          <path
+                            d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="home-links-container1">
+                      <span class="home-link06 Navbar-Link">About</span>
+                      <span class="home-link07 Navbar-Link">Experience</span>
+                      <span class="home-link08 Navbar-Link">Portofolio</span>
+                      <span class="Navbar-Link">Contact</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    </section>
+    <!-- <div class="leftmc">
+        <div class="trigger show"><i class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+        <div class="pageinfo">
+            <div class="pi_col">
+                <div class="home"><i class="fa fa-home" aria-hidden="true"></i> <a href="">Home</a>
+                </div>
+                <div class="blogs"><i class="fa fa-book" aria-hidden="true"></i>
+                    <a href="">Read Blogs</a>
+                </div>
+                <div class="teach"><i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                    <a href="">Get Teacher's Help</a>
+                </div>
+
+                <div class="about"><i class="fa fa-info-circle" aria-hidden="true"></i>
+                    <a href="">About Us</a>
+                </div>
+            </div>
+        </div>
+
+    </div> -->
+    <form method="post" action="indexx.html" class="askquestion">
+        <label class="h3">Topic :</label>
+        <input type="text" id="title" name="title" class="form-control" placeholder="ex : Learn php " required />
+        <br>
+        <label class="h3">Content :</label>
+        <textarea name="contentDetails" id="contentDetails" rows="40" cols="80">
+        </textarea>
+        <button class="savequs" type="submit">Submit Question</button>
+    </form>
+    <div class="mc">
+        <nav>
+            <div class="slider"></div>
+            <ul>
+                <li class="ra">
+                    <a href='?x=ra'> Recent Asked</a>
+                </li>
+                <li class="ma">
+                    <a href='?x=ma'> Most Answered</a>
+                </li>
+                <li class="w">
+                    <a href='?x=w'> Work</a>
+                </li>
+                <li class="c">
+                    <a href='?x=c'> Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+        <br>
+        <div class="qa_container">
+            <div class="col1">
+                <div class="userimg"><img
+                        src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlciUyMHByb2ZpbGV8ZW58MHx8MHx8&w=1000&q=80"
+                        alt="" srcset=""></i>
+                </div>
+                <div class="vote">
+                    <button class="upvote v"><i class="fa fa-sort-asc" aria-hidden="true"></i>
+                    </button>
+                    <div class="count">11</div>
+                    <button class="downvote v"><i class="fa fa-sort-desc" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="col2">
+                <div class="infobar cdw">
+                    <div class="name">Matine Hope</div>
+                    <div class="status">Answered</div>
+                    <div class="date">Asked : April 19, 2018</div>
+                </div>
+                <div class="heading">
+                    Is this statement , "i see him last night" can be understood as " i saw him last night" ?
+
+                </div>
+                <br>
+                <div class="details">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quisquam pariatur perspiciatis
+                    necessitatibus eligendi nemo adipisci voluptates eveniet, distinctio officiis et fugiat rerum, vel
+                    similique doloremque, esse nam. Reiciendis nihil quisquam vel tempora repudiandae aliquam rerum
+                    inventore, excepturi, doloribus obcaecati eligendi laboriosam pariatur ab. Eveniet enim maxime
+                    molestias minima quis vel! Deleniti non totam architecto in, praesentium nisi reiciendis repudiandae
+                    explicabo illum sapiente cumque nam modi ut inventore amet aliquid tempora qui voluptates est
+                    perspiciatis vero fugiat! Ad saepe unde rerum repellendus iusto. Aliquam in commodi tempora suscipit
+                    sint distinctio. Ipsam, corrupti sequi quibusdam magni autem magnam amet in exercitationem.
+                </div>
+                <div class="tags">
+                    <a class="dh" href="">English</a>
+                    <a class="dh" href=""> Language </a>
+                </div>
+                <div class="reply cdw">
+                    <a class=" na dh"><i class="fa fa-comments-o" aria-hidden="true"></i> 4 Answers</a>
+                    <a class=" views dh"> <i class="fa fa-eye" aria-hidden="true"></i>
+                        904 views</a>
+                    <a class="sa">Answer</a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="qa_container">
+            <div class="col1">
+                <div class="userimg"><img
+                        src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlciUyMHByb2ZpbGV8ZW58MHx8MHx8&w=1000&q=80"
+                        alt="" srcset=""></i>
+                </div>
+                <div class="vote">
+                    <button class="upvote v"><i class="fa fa-sort-asc" aria-hidden="true"></i>
+                    </button>
+                    <div class="count">11</div>
+                    <button class="downvote v"><i class="fa fa-sort-desc" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="col2">
+                <div class="infobar cdw">
+                    <div class="name">Matine Hope</div>
+                    <div class="status">Answered</div>
+                    <div class="date">Asked : April 19, 2018</div>
+                </div>
+                <div class="heading">
+                    Is this statement , "i see him last night" can be understood as " i saw him last night" ?
+
+                </div>
+                <br>
+                <div class="details">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quisquam pariatur perspiciatis
+                    necessitatibus eligendi nemo adipisci voluptates eveniet, distinctio officiis et fugiat rerum, vel
+                    similique doloremque, esse nam. Reiciendis nihil quisquam vel tempora repudiandae aliquam rerum
+                    inventore, excepturi, doloribus obcaecati eligendi laboriosam pariatur ab. Eveniet enim maxime
+                    molestias minima quis vel! Deleniti non totam architecto in, praesentium nisi reiciendis repudiandae
+                    explicabo illum sapiente cumque nam modi ut inventore amet aliquid tempora qui voluptates est
+                    perspiciatis vero fugiat! Ad saepe unde rerum repellendus iusto. Aliquam in commodi tempora suscipit
+                    sint distinctio. Ipsam, corrupti sequi quibusdam magni autem magnam amet in exercitationem.
+                </div>
+                <div class="tags">
+                    <a class="dh" href="">English</a>
+                    <a class="dh" href=""> Language </a>
+                </div>
+                <div class="reply cdw">
+                    <a class=" na dh"><i class="fa fa-comments-o" aria-hidden="true"></i> 4 Answers</a>
+                    <a class=" views dh"> <i class="fa fa-eye" aria-hidden="true"></i>
+                        904 views</a>
+                    <a class="sa">Answer</a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="qa_container">
+            <div class="col1">
+                <div class="userimg"><img
+                        src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlciUyMHByb2ZpbGV8ZW58MHx8MHx8&w=1000&q=80"
+                        alt="" srcset=""></i>
+                </div>
+                <div class="vote">
+                    <button class="upvote v"><i class="fa fa-sort-asc" aria-hidden="true"></i>
+                    </button>
+                    <div class="count">11</div>
+                    <button class="downvote v"><i class="fa fa-sort-desc" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="col2">
+                <div class="infobar cdw">
+                    <div class="name">Matine Hope</div>
+                    <div class="status">Answered</div>
+                    <div class="date">Asked : April 19, 2018</div>
+                </div>
+                <div class="heading">
+                    Is this statement , "i see him last night" can be understood as " i saw him last night" ?
+
+                </div>
+                <br>
+                <div class="details">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quisquam pariatur perspiciatis
+                    necessitatibus eligendi nemo adipisci voluptates eveniet, distinctio officiis et fugiat rerum, vel
+                    similique doloremque, esse nam. Reiciendis nihil quisquam vel tempora repudiandae aliquam rerum
+                    inventore, excepturi, doloribus obcaecati eligendi laboriosam pariatur ab. Eveniet enim maxime
+                    molestias minima quis vel! Deleniti non totam architecto in, praesentium nisi reiciendis repudiandae
+                    explicabo illum sapiente cumque nam modi ut inventore amet aliquid tempora qui voluptates est
+                    perspiciatis vero fugiat! Ad saepe unde rerum repellendus iusto. Aliquam in commodi tempora suscipit
+                    sint distinctio. Ipsam, corrupti sequi quibusdam magni autem magnam amet in exercitationem.
+                </div>
+                <div class="tags">
+                    <a class="dh" href="">English</a>
+                    <a class="dh" href=""> Language </a>
+                </div>
+                <div class="reply cdw">
+                    <a class=" na dh"><i class="fa fa-comments-o" aria-hidden="true"></i> 4 Answers</a>
+                    <a class=" views dh"> <i class="fa fa-eye" aria-hidden="true"></i>
+                        904 views</a>
+                    <a class="sa">Answer</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="rightmc">
+        <div><button id="btn" onclick="ani('mc' , 'askquestion' , this.id)">ASK A QUESTION</button></div>
+        <div class="pageinfo">
+            <div class="pi_row">
+                <div class="tq" style="--bc:#0169af;"><span>Questions</span><br> <span class="counter"
+                        data-count="15">0</span></div>
+                <div class="ans" style="--bc:rgb(243, 109, 109);"><span>Answers</span><br> <span class="counter"
+                        data-count="10">0</span></div>
+
+            </div>
+            <div class="pi_row">
+                <div class="users" style="--bc:rgb(134, 230, 138);"><span>Users</span><br> <span class="counter"
+                        data-count="9">0</span></div>
+                <div class="ansu" style="--bc:#0169af;"><span>Your Ans</span><br> <span class="counter"
+                        data-count="5">0</span></div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
