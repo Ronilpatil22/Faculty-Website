@@ -1,3 +1,5 @@
+{% load static %}
+{% comment %} {% static "images" as baseUrl%} {% endcomment %}
 <!doctype html>
 <html lang="en">
   <head>
@@ -5,13 +7,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+	<link href="{% static 'https://fonts.googleapis.com/css?family=Roboto:400,100,300,700'%}" rel='stylesheet' type='text/css'>
 
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="{% static 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %}">
 	
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="./home.css">
-	<link rel="stylesheet" href="./style.css">
+	<link rel="stylesheet" href="{% static 'style.css' %}">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	<link rel="stylesheet" href="{% static 'home.css' %}">
+	<link rel="stylesheet" href="{% static 'css/style (2).css' %}">
 	<style data-tag="reset-style-sheet">
 		html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
 	  </style>
@@ -35,17 +38,17 @@
 	  </style>
 	  <link
 		rel="stylesheet"
-		href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&amp;display=swap"
+		href="{% static 'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&amp;display=swap'%}"
 		data-tag="font"
 	  />
 	  <link
 		rel="stylesheet"
-		href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+		href="{% static 'https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap'%}"
 		data-tag="font"
 	  />
 	  <link
 		rel="stylesheet"
-		href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&amp;display=swap"
+		href="{% static 'https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&amp;display=swap'%}"
 		data-tag="font"
 	  />
 	</head>
@@ -61,7 +64,7 @@
 			<div class="home-container">
 				<div data-role="Header" class="home-navbar-container">
 				  <div class="home-navbar">
-					<a href="index.html" class="home-navlink">
+					<a href="{% static 'index.html'%}" class="home-navlink">
 					  <img
 						alt="image"
 						src="public/playground_assets/download-200w.jpeg"
@@ -69,19 +72,19 @@
 					  />
 					</a>
 					<div class="home-links-container">
-					  <a href="index.html" class="home-link02 Navbar-Link">
+					  <a href="{%static 'index.html'%}" class="home-link02 Navbar-Link">
 						Home
 					  </a>
-					  <a href="research-group.html" class="home-link02 Navbar-Link">
+					  <a href="{%static 'research-group.html'%}" class="home-link02 Navbar-Link">
 						Research Group
 					  </a>
-					  <a href="student-portal.html" class="home-link03 Navbar-Link">
+					  <a href="{%static 'student-portal.html'%}" class="home-link03 Navbar-Link">
 						Students Portal
 					  </a>
-					  <a href="discussion.html" class="home-link04 Navbar-Link">
+					  <a href="{%static 'discussion.html'%}" class="home-link04 Navbar-Link">
 						Discussion Board
 					  </a>
-					  <a href="contact (2).html" class="home-link05 Navbar-Link">Contact</a>
+					  <a href="{%static 'contact (2).html'%}" class="home-link05 Navbar-Link">Contact</a>
 					</div>
 					<div data-role="BurgerMenu" class="home-burger-menu">
 					  <svg viewBox="0 0 1024 1024" class="home-icon">
@@ -121,7 +124,7 @@
 									<h3 class="mb-4">Get in touch</h3>
 									<div id="form-message-warning" class="mb-4"></div> 
 				      		<div id="form-message-success" class="mb-4">
-				            Your message was sent, thank you!
+				           <h1> Your message has been sent, thank you!</h1>
 				      		</div>
 									<form method="POST" id="contactForm" name="contactForm" class="contactForm">
 										<div class="row">
@@ -184,7 +187,7 @@
 				        			<span class="fa fa-paper-plane"></span>
 				        		</div>
 				        		<div class="text pl-3">
-					            <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+					            <p><span>Email:</span> <a href="{%static 'mailto:info@yoursite.com'%}">info@yoursite.com</a></p>
 					          </div>
 				          </div>
 				        	<div class="dbox w-100 d-flex align-items-center">
@@ -205,11 +208,11 @@
 		</div>
 	</section>
 
-	<script src="js/jquery.min.js"></script>
-  <script src="js/popper.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.validate.min.js"></script>
-  <script src="js/main.js"></script>
+	<script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/popper.js'%}"></script>
+  <script src="{% static 'js/bootstrap.min.js'%}"></script>
+  <script src="{% static 'js/jquery.validate.min.js'%}"></script>
+  <script src="{% static 'js/main.js'%}"></script>
 
 	</body>
 </html>

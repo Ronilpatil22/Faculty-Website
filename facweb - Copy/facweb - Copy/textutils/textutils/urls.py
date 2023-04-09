@@ -26,6 +26,7 @@ from .import views
 
 urlpatterns = [
     path('', include('fac.urls')),
+    
     path('admin/', admin.site.urls),
    
 
