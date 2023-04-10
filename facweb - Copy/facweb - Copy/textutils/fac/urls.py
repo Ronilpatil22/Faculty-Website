@@ -25,7 +25,6 @@ from .import views
 
 urlpatterns = [
     path('',views.index , name = 'index'),
-
     path('index/',views.index , name='index'),
     path('research/',views.research , name='research'),
     path('students/',views.students , name='students'),
