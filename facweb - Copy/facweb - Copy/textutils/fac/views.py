@@ -26,3 +26,5 @@ def creators(request):
     
 
 # Create your views here.
+def contact(request):
+    return render(request, "contact.html")
