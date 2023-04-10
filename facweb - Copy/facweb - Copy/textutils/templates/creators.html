@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  {% load static %}
+  <title>CodePen - 3D Cards Flip</title>
+  <link rel="stylesheet" href="{% static 'css/creators.css' %}">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<button class="card" onclick="this.classList.toggle('flipped')">
+  <span class="wrapper"><span class="content">
+      <span class="face back">Yash</span>
+      <span class="face front"></span>
+    </span>
+  </span>
+</button>
+<button class="card" onclick="this.classList.toggle('flipped')">
+  <span class="wrapper"><span class="content">
+      <span class="face back">Ronil Patil<br>
+        CSE Undergrad At IIT Indore
+      </span>
+      <span class="face front"></span>
+    </span>
+  </span>
+</button>
+<!-- partial -->
+  
+</body>
+</html>
