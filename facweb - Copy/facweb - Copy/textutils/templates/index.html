@@ -7,7 +7,6 @@
 {% block content %}
 <link href="{% static 'css/home.css' %}" rel="stylesheet" />
     <div>
-
       <div class="home-container">
         <div class="home-section-separator"></div>
         <div class="home-container2">
@@ -25,9 +24,12 @@
               <div class="home-cta-btn-container">
                 <a href="/mywork/" class="home-cta-btn Anchor button">
                   <span class="home-text05">MY WORK </span>
+                </a>
                   <a href="/aboutme/" class="home-cta-btn1 button Anchor">
+                    ABOUT ME
+                </a>
               </div>
-            </div>
+              </div>
             <img
               alt="image"
               src="{% static 'public/playground_assets/images__1_-removebg-preview-400w.png' %}"
@@ -185,9 +187,8 @@
             <button class="home-button Anchor button">SEND</button>
           </div>
         </div>
-        
       </div>
-    </div>
+      </div>
     {% endblock content %}
     {% block scripts %}
     
