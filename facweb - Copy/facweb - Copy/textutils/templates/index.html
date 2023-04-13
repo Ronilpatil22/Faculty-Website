@@ -12,29 +12,31 @@
         <div class="home-container2">
           <div class="home-hero">
             <div class="home-hero-text-container">
+              {% for introduction in introduction %}
               <h1 class="home-heading1">
-                <span class="home-text Section-Heading">Hi! Everyone</span>
+                <span class="home-text Section-Heading">{{introduction.BIG_TEXT}}</span>
                 <br />
-                <span>I am Dr. Puneet Gupta</span>
+                <span>{{introduction.MEDIUM_TEXT}}</span>
                 <br />
               </h1>
               <span class="home-text04 Section-Text">
-                I have been working as a professor in IIT 
+                {{introduction.SMALL_TEXT}}
               </span>
               <div class="home-cta-btn-container">
-                <a href="/mywork/" class="home-cta-btn Anchor button">
-                  <span class="home-text05">MY WORK </span>
+                <a href="/{{introduction.LINK_1_URL}}/" class="home-cta-btn Anchor button">
+                  <span class="home-text05">{{introduction.LINK_1}} </span>
                 </a>
-                  <a href="/aboutme/" class="home-cta-btn1 button Anchor">
-                    ABOUT ME
+                  <a href="/{{introduction.LINK_2_URL}}/" class="home-cta-btn1 button Anchor">
+                    {{introduction.LINK_2}}
                 </a>
               </div>
               </div>
             <img
               alt="image"
-              src="{% static 'public/playground_assets/images__1_-removebg-preview-400w.png' %}"
+              src="{{introduction.Profile_image.url}}"
               class="home-image1"
             />
+            {%endfor%}
           </div>
         </div>
         <div class="home-testimonial">
@@ -69,11 +71,20 @@
                   <span class="testimonial-card1-text2">
                     <span>{{testimonials.Designation}}</span>
                   </span>
+                  {% if testimonials.Photo is None %}{
+                    <img
+                    alt="profile"
+                    src="{% static 'default.png' %}"
+                    class="testimonial-card1-image"
+                  />
+                  }
+                  {% else %}
                   <img
                     alt="profile"
                     src="{{testimonials.Photo.url}}"
                     class="testimonial-card1-image"
                   />
+                  {% endif %}
                 </div>
               </div>
               {% endfor %}

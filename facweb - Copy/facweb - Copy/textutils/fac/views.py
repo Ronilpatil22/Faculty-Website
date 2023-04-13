@@ -1,11 +1,12 @@
 from django.shortcuts import render
 from .models import testimonials
-
+from.models import introduction
 
 # Create your views here.
 def index(request):
+    introduction_list = introduction.objects.all()
     testimonial_list = testimonials.objects.all()
-    return render(request, "index.html",{'testimonial_1': testimonial_list})
+    return render(request, "index.html",{'testimonial_1': testimonial_list,'introduction':introduction_list})
 
 def research(request):
     return render(request, "research-group.html")
@@ -28,6 +29,3 @@ def aboutme(request):
 def creators(request):
     return render(request, "creators.html")
     
-
-def contact(request):
-    return render(request, "contact.html")
