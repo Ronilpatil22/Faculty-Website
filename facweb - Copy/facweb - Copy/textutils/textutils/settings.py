@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'bootstrap5',
     'django_bootstrap_icons',
      'fontawesomefree',
+     'fac'
 ]
 
 MIDDLEWARE = [
@@ -129,3 +130,6 @@ STATIC_ROOT = os.path.join(BASE_DIR,'assets')
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+MEDIA_URl = '/media/'
