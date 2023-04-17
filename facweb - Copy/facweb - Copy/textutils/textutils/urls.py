@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
 from .import views
 
 
@@ -26,9 +28,14 @@ from .import views
 
 urlpatterns = [
     path('', include('fac.urls')),
-    
+    path('', include('contact.urls')),
+    path('', include('home.urls')),
+    path('', include('about.urls')),
+    path('', include('mywork.urls')),
+    path('', include('researchgroup.urls')),
+    path('', include('discussionboard.urls')),
+    path('', include('studentsportal.urls')),
     path('admin/', admin.site.urls),
-   
-
-   
 ]
+
+urlpatterns = urlpatterns + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
