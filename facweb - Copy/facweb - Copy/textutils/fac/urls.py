@@ -22,15 +22,7 @@ from .import views
 #     path('',views.index , name = 'index'),
 #     path('about',views.about , name = 'about'),
 # ]
-
 urlpatterns = [
-    path('',views.index , name = 'index'),
-    path('index/',views.index , name='index'),
-    path('research/',views.research , name='research'),
-    path('students/',views.students , name='students'),
-    path('discussion/',views.discussion , name='discussion'),
-    path('contact/',views.contact , name='contact'),
-    path('mywork/',views.mywork , name='mywork'),
-    path('aboutme/',views.aboutme , name='aboutme'),
-    path('creators/',views.creators , name='creators'),
+    
 ]
+

@@ -41,7 +41,14 @@ INSTALLED_APPS = [
     'bootstrap5',
     'django_bootstrap_icons',
      'fontawesomefree',
-     'fac'
+     'fac',
+     'contact',
+     'home',
+     'about',
+     'mywork',
+     'researchgroup',
+     'discussionboard',
+     'studentsportal',
 ]
 
 MIDDLEWARE = [

@@ -28,6 +28,13 @@ from .import views
 
 urlpatterns = [
     path('', include('fac.urls')),
+    path('', include('contact.urls')),
+    path('', include('home.urls')),
+    path('', include('about.urls')),
+    path('', include('mywork.urls')),
+    path('', include('researchgroup.urls')),
+    path('', include('discussionboard.urls')),
+    path('', include('studentsportal.urls')),
     path('admin/', admin.site.urls),
 ]
 
