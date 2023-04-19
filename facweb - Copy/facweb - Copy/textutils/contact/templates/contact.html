@@ -21,11 +21,12 @@
 				      		<div id="form-message-success" class="mb-4">
 				           <h1> {{contacts.FORM_SUBMIT_MESSAGE_TEXT}}</h1>
 				      		</div>
-									<form method="POST" id="contactForm" name="contactForm" class="contactForm">
+							  <form method="POST" id="contactForm" name="contactForm" class="contactForm" action='{%url 'contact'%}'>
+										{% csrf_token %}
 										<div class="row">
 											<div class="col-md-6">
 												<div class="form-group">
-													<label class="label" for="name">Full Name</label>
+													<label class="label" for="name" >Full Name</label>
 													<input type="text" class="form-control" name="name" id="name" placeholder="Name">
 												</div>
 											</div>
@@ -49,7 +50,8 @@
 											</div>
 											<div class="col-md-12">
 												<div class="form-group">
-													<input type="submit" value="Send Message" class="btn btn-primary">
+													{% comment %} <button type="submit" form="myform" value="Submit">Submit</button> {% endcomment %}
+													<button type="submit"><input type="submit" value="Send Message" class="btn btn-primary"></button>
 													<div class="submitting"></div>
 												</div>
 											</div>

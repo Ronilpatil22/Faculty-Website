@@ -1,5 +1,4 @@
 from django.db import models
-
 # Create your models here.
 class contacts(models.Model):
     BIG_TEXT_LEFT = models.CharField(max_length=2000,blank=True)
@@ -10,3 +9,11 @@ class contacts(models.Model):
     WEBSITE = models.URLField(blank=True)
     FORM_BIG_TEXT = models.CharField(max_length=2000,blank=True)
     FORM_SUBMIT_MESSAGE_TEXT = models.CharField(max_length=2000,blank=True)
+
+
+class getintouch_details(models.Model):
+    Name = models.CharField(max_length=2000,blank=True)
+    Email = models.EmailField(max_length=2000)
+    Subject = models.CharField(max_length=10000,default=Name)
+    Message = models.CharField(max_length=10000000)
+    date_time=models.DateTimeField(blank=True)

@@ -7,16 +7,20 @@
 	<link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css' %}">
 	<link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.css' %}">
   <link href="{% static 'https://fonts.googleapis.com/css?family=Poppins:500,700&display=swap' %}" rel="stylesheet">
-	<link rel='stylesheet' href='{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css' %}'>
-<link rel='stylesheet' href='{% static 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css' %}'>
-{% endblock head %}
-{% block content %}
-<div>
+	 <link rel='stylesheet' href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css' %}">
+  <link rel='stylesheet' href='{% static 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css' %}'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css"> 
+  <link href="{% static 'https://fonts.googleapis.com/css?family=Anton' %}" rel="stylesheet">
+  <link rel='stylesheet' href='{% static 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css' %}'> 
+  {% endblock head %}
+  {% block content %}
+  <div>
+      <link rel="stylesheet" type="text/css" href="{% static 'css/research.css' %}">
       <link rel="stylesheet" href="{% static 'css/card.css' %}">
       <link href="{% static 'css/research-group.css' %}" rel="stylesheet" />
       <div class="research-group-container">
         <div class="page">
-          <h1>Pure CSS Tabs</h1>	
+          <h1 style="color:white">Pure CSS Tabs</h1>	
           <div class="header-section">
             <div class="row justify-content-center text-center">
               <div class="col-md-8 col-lg-6">
@@ -29,228 +33,62 @@
           </div>
           
           <!-- tabs -->
+          {% for research_group_class in research_group_class %}
           <div class="pcss3t pcss3t-effect-scale pcss3t-theme-1">
-           <input type="radio" name="pcss3t" checked  id="tab1"class="tab-content-first">
-            <label for="tab1"><i class="icon-bolt"></i>Current</label> 
-             <input type="radio" name="pcss3t" id="tab5" class="tab-content-last">
-            <label for="tab5"><i class="icon-globe"></i>Alumni</label> 
-            
+           <input type="radio" name="pcss3t" checked  id="tab{{research_group_class.id}}"class="tab-content-first">
+            <label for="tab{{research_group_class.id}}"><i class="icon-bolt"></i>{{research_group_class.Name_of_class}}</label> 
             <ul>
-             <li class="tab-content tab-content-first typography">
-              <section class="section-team">
-                <div class="container">
-                  <!-- Start Header Section -->
-                  <!-- / End Header Section -->
-                  <div class="row">
-                    <!-- Start Single Person -->
-                    <div class="col-sm-6 col-lg-4 col-xl-3" >
-                      <div class="single-person">
-                        <div class="person-image">
-                          <img src="https://i.ibb.co/G2CBWvb/person1.jpg" alt="">
-                          <span class="icon" >
-                            <button type="button" onclick="showSection()" class="show1" tabindex="1"><i class="fa-solid fa-circle-plus"></i></button>
-                          </span>
+              {% for research_group_details in research_group_details %}
+             <li class="tab-content tab-content-{{research_group_class.id}} typography">
+              <div class="container-fluid main-cont">
+                <div class="row news-row">
+                    <div class="container-fluid col-md-12 col-sm-6 justify-content-center news-block">
+                        <div class="card-group">
+                          <div class="underlay">
+                            <div class="card">
+                                <div class="card-img-top" style="background-image: url('{{research_group_details.Image.url}}')"></div>
+                                <div class="card-block" >
+                                <h5 class="card-title" style="font-family: 'Anton', sans-serif">{{research_group_details.Name}}<hr></h5>
+                                <p class="card-text" >Canon will have a full slate of new and updated products to show attendees at this year’s NAB Show. The company has announced its new Compact-Servo 70-200mm telephoto zoom lens <a href="#"><u>Read More...</u></a></p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                </div>
+                            </div>
+                          </div>
+                          
                         </div>
-                        <div class="person-info">
-                          <h3 class="full-name">John Doe</h3>
-                          <span class="speciality">Web Developer</span>
-                        </div>
-                      </div>
                     </div>
-                    <section class="dark" id="effect1">
-                      <div class="container py-4">
-                    <article class="postcard dark blue">
-                      <a class="postcard__img_link" href="#">
-                        <img class="postcard__img" src="" alt="Image Title" />
-                      </a>
-                      <div class="postcard__text">
-                        <h1 class="postcard__title blue"><a href="#">Podcast Title</a></h1>
-                        <div class="postcard__subtitle small">
-                          <time datetime="2020-05-25 12:00:00">
-                            <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
-                          </time>
-                        </div>
-                        <div class="postcard__bar"></div>
-                        <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
-                        <ul class="postcard__tagbox">
-                          <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
-                          <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
-                          <li class="tag__item play blue">
-                            <button onclick="hideSection()" id="hide">Hide</button>
-                          </li>
-                        </ul>
-                      </div>
-                    </article>
-                    </div>
-                    </section>
-                    <!-- / End Single Person -->
-                    <!-- Start Single Person -->
-                    {% comment %} <div class="col-sm-6 col-lg-4 col-xl-3">
-                      <div class="single-person">
-                        <div class="person-image">
-                          <img src="https://i.ibb.co/nbpNr4r/person2.jpg" alt="">
-                          <span class="icon">
-                            <button type="button" onclick="show()" id="btnId"><i class="fa-solid fa-circle-plus"></i></button>
-                          </span>
-                        </div>
-                        <div class="person-info">
-                          <h3 class="full-name">Robert Smith</h3>
-                          <span class="speciality">WordPress Developer</span>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- / End Single Person -->
-                    <!-- Start Single Person -->
-                    <div class="col-sm-6 col-lg-4 col-xl-3">
-                      <div class="single-person">
-                        <div class="person-image">
-                          <img src="https://i.ibb.co/25zdRMr/person3.jpg" alt="">
-                          <span class="icon">
-                            <i class="fa-solid fa-circle-plus"></i>
-                          </span>
-                        </div>
-                        <div class="person-info">
-                          <h3 class="full-name">John Doe</h3>
-                          <span class="speciality">Angular Developer</span>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- / End Single Person -->
-                    <!-- Start Single Person -->
-                    <div class="col-sm-6 col-lg-4 col-xl-3">
-                      <div class="single-person">
-                        <div class="person-image">
-                          <img src="https://i.ibb.co/w0ynr2Q/person4.jpg" alt="">
-                          <span class="icon">
-                            <i class="fa-solid fa-circle-plus"></i>
-                          </span>
-                        </div>
-                        <div class="person-info">
-                          <h3 class="full-name">John Smith</h3>
-                          <span class="speciality">Javascript Developer</span>
-                        </div>
-                      </div>
-                    </div> {% endcomment %}
-                    <!-- / End Single Person -->
-                  </div>
                 </div>
-              </section>
+            </div>
              </li>
-             
-              
-             <li class="tab-content tab-content-last typography">
-                <div class="typography">
-                  <section class="section-team">
-                    <div class="container">
-                      <div class="row">
-                        <!-- Start Single Person -->
-                        <div class="col-sm-6 col-lg-4 col-xl-3">
-                          <div class="single-person">
-                            <div class="person-image">
-                              <img src="https://i.ibb.co/G2CBWvb/person1.jpg" alt="">
-                              <span class="icon">
-                                <i class="fa-solid fa-circle-plus"></i>
-                              </span>
-                            </div>
-                            <div class="person-info">
-                              <h3 class="full-name">John Doe</h3>
-                              <span class="speciality">Web Developer</span>
-                            </div>
-                          </div>
-                        </div>
-                        <!-- / End Single Person -->
-                        <!-- Start Single Person -->
-                        <div class="col-sm-6 col-lg-4 col-xl-3">
-                          <div class="single-person">
-                            <div class="person-image">
-                              <img src="https://i.ibb.co/nbpNr4r/person2.jpg" alt="">
-                              <span class="icon">
-                                <i class="fa-solid fa-circle-plus"></i>
-                              </span>
-                            </div>
-                            <div class="person-info">
-                              <h3 class="full-name">Robert Smith</h3>
-                              <span class="speciality">WordPress Developer</span>
-                            </div>
-                          </div>
-                        </div>
-                        <!-- / End Single Person -->
-                        <!-- Start Single Person -->
-                        <div class="col-sm-6 col-lg-4 col-xl-3">
-                          <div class="single-person">
-                            <div class="person-image">
-                              <img src="https://i.ibb.co/25zdRMr/person3.jpg" alt="">
-                              <span class="icon">
-                                <i class="fa-solid fa-circle-plus"></i>
-                              </span>
-                            </div>
-                            <div class="person-info">
-                              <h3 class="full-name">John Doe</h3>
-                              <span class="speciality">Angular Developer</span>
-                            </div>
-                          </div>
-                        </div>
-                        <!-- / End Single Person -->
-                        <!-- Start Single Person -->
-                        <div class="col-sm-6 col-lg-4 col-xl-3">
-                          <div class="single-person">
-                            <div class="person-image">
-                              <img src="https://i.ibb.co/w0ynr2Q/person4.jpg" alt="">
-                              <span class="icon">
-                                <i class="fa-solid fa-circle-plus"></i>
-                              </span>
-                            </div>
-                            <div class="person-info">
-                              <h3 class="full-name">John Smith</h3>
-                              <span class="speciality">Javascript Developer</span>
-                            </div>
-                          </div>
-                        </div>
-                        <section class="dark" id="effect1">
-                          <div class="container py-4">
-                        <article class="postcard dark blue">
-                          <a class="postcard__img_link" href="#">
-                            <img class="postcard__img" src="" alt="Image Title" />
-                          </a>
-                          <div class="postcard__text">
-                            <h1 class="postcard__title blue"><a href="#">Podcast Title</a></h1>
-                            <div class="postcard__subtitle small">
-                              <time datetime="2020-05-25 12:00:00">
-                                <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
-                              </time>
-                            </div>
-                            <div class="postcard__bar"></div>
-                            <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
-                            <ul class="postcard__tagbox">
-                              <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
-                              <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
-                              <li class="tag__item play blue">
-                                <button onclick="hideSection()" id="hide">Hide</button>
-                              </li>
-                            </ul>
-                          </div>
-                        </article>
-                        </div>
-                        </section>
-                        <!-- / End Single Person -->
-                      </div>
-                    </div>
-                  </section>
-                
-                </div>
-              </li> 
-
-              
+             {% endfor %}
             </ul>
           </div>
+          {%endfor%}
           <!--/ tabs -->
         </div>
       </div>
     </div>
 {% endblock content %}
 {% block scripts %}
-<script src="{% static 'js/research.js' %}"></script>
+<script src="{% static 'jquery-3.1.1.min.js' %}"></script>
+<script name="toggle-grid" type="text/javascript">
+$(document).ready(function(){
+  $(document).on("keypress", function(event) {
+    // If 'alt + g' keys are pressed:
+    if (event.which === 169){
+        $('#toggle-grid').toggle();
+     }
+  });
 
+  $('#toggle-grid').on("click"
+  , function() {
+      $('.pixel-grid').toggle();
+      $('#toggle-grid').toggleClass('orange');
+    });
+});
+</script>
+<script src='{% static 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js' %}'></script>
+<script  src="{% static 'js/researc.js' %}"></script>
 {% endblock scripts %}
 
 
