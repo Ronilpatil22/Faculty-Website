@@ -5,402 +5,413 @@
 {% block head %}
 {% endblock head %}
 {% block content %}
+<style>
+  
+    .links-container {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left:40px;
+      margin-right:40px;
+    }
+    .more{
+      display: none;
+    }
+
+    .link {
+
+      margin: 20px;
+
+
+      right: 80px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 430px;
+    }
+
+    .link a {
+      font-size: 24px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #333;
+    }
+
+    .link p {
+      font-size: 16px;
+      margin-top: 4px;
+      color: #666;
+    }
+    .bton {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 15px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin-right: 5px;
+      cursor: pointer;
+    }
+    
+
+    {% comment %} h1 {
+      text-align: center;
+    } {% endcomment %}
+    .art{
+      padding-top:10px;
+      align-items: center;
+      text-align: center;
+      }
+    .arts{
+      flex: wrap;
+    }
+
+    .my-work-text04{
+      cursor:pointer;
+      hover:blue;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    h1 {
+      text-align: center;
+      margin-top: 10px;
+    }
+    
+    .project {
+      width: 25%;
+      margin: 50px auto;
+      border: 1px solid #ccc;
+      padding: 10px;
+      
+    }
+    .proj{
+      display: flex;
+      flex-wrap: wrap;
+      margin-left:20px;
+      margin-right:20px;
+    }
+    
+    .project-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+
+    }
+    
+    .project-item label {
+      font-weight: bold;
+    }
+    
+    .project-item span {
+      font-weight: normal;
+    }
+    
+    
+  
+</style>
 <link href="{% static 'css/my-work.css' %}" rel="stylesheet" />
-    <div>
-      <div class="my-work-container">
-        <div class="my-work-section-separator"></div>
-        <div class="my-work-container02">
-          <div class="my-work-hero">
-            <div class="my-work-stats">
-              <div class="my-work-stat">
-                <h1 class="my-work-text">
-                  <span>50</span>
-                  <span>+</span>
-                </h1>
-                <span class="my-work-text03">
-                  <span class="my-work-text04">Articles</span>
-                  <br />
-                </span>
-              </div>
-              <div class="my-work-stat1">
-                <h1 class="my-work-heading1"><span>369</span></h1>
-                <span class="my-work-text07">Citations</span>
-              </div>
-              <div class="my-work-stat2">
-                <h1 class="my-work-text08">
-                  <span>5</span>
-                  <span>+</span>
-                </h1>
-                <span class="my-work-text11">Books</span>
-              </div>
-              <div class="my-work-stat3">
-                <h1 class="my-work-text12">50+</h1>
-                <span class="my-work-text13">
-                  <span class="my-work-text14">Hours of&nbsp;</span>
-                  <br />
-                  <span>Youtube Content</span>
-                  <br />
-                </span>
-              </div>
+    
+    
+<body>
+  <div>
+    <div class="my-work-container">
+      <div class="my-work-section-separator"></div>
+      <div class="my-work-container02">
+        <div class="my-work-hero">
+          <div class="my-work-stats">
+            <div class="my-work-stat">
+              <h1 class="my-work-text">
+                <span>50</span>
+                <span>+</span>
+              </h1>
+              <span class="my-work-text03">
+                <span class="my-work-text04">Articles</span>
+                <button onclick="pageScroll()"
+                <br />
+              </span>
             </div>
+            <div class="my-work-stat1">
+              <h1 class="my-work-heading1"><span>5 +</span></h1>
+              <span class="my-work-text04">Projects</span>
+            </div>
+            <div class="my-work-stat2">
+              <h1 class="my-work-text08">
+                <span>5</span>
+                <span>+</span>
+              </h1>
+              <span class="my-work-text04">Books</span>
+            </div>
+          
           </div>
-        </div>
-        <div class="my-work-banner">
-          <h1 class="my-work-text18">ARTICLES</h1>
-          <div class="my-work-blog">
-            <div class="my-work-container03">
-              <div
-                class="blog-post-card3-blog-post-card blog-post-card3-root-class-name1"
-              >
-                <img
-                  alt="image"
-                  src="https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDF8fHdvcmtpbmclMjBkZXNrfGVufDB8fHx8MTYyNjI1MDYwMg&amp;ixlib=rb-1.2.1&amp;h=1200"
-                  class="blog-post-card3-image"
-                />
-                <div class="blog-post-card3-container">
-                  <span class="blog-post-card3-text">
-                    <span>ENTERPRISE</span>
-                  </span>
-                  <h1 class="blog-post-card3-text1">
-                    <span>Lorem ipsum dolor sit amet</span>
-                  </h1>
-                  <div class="blog-post-card3-container1">
-                    <span class="blog-post-card3-text2">
-                      <span>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Sed non volutpat turpis. Mauris luctus rutrum mi ut
-                        rhoncus. Integer in dignissim tortor. Lorem ipsum dolor
-                        sit amet, consectetur adipiscing ...
-                      </span>
-                    </span>
-                    <span class="blog-post-card3-text3">Read More</span>
-                  </div>
-                  <span class="blog-post-card3-text4">
-                    <span>by Jon Doe 5 hours ago</span>
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div class="my-work-container04">
-              <div
-                class="blog-post-card3-blog-post-card blog-post-card3-root-class-name2"
-              >
-                <img
-                  alt="image"
-                  src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDl8fHdvcmt8ZW58MHx8fHwxNjI2NDUwNzky&amp;ixlib=rb-1.2.1&amp;h=1000"
-                  class="blog-post-card3-image"
-                />
-                <div class="blog-post-card3-container">
-                  <span class="blog-post-card3-text">
-                    <span>ENTERPRISE</span>
-                  </span>
-                  <h1 class="blog-post-card3-text1">
-                    <span>Lorem ipsum dolor sit amet</span>
-                  </h1>
-                  <div class="blog-post-card3-container1">
-                    <span class="blog-post-card3-text2">
-                      <span>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Sed non volutpat turpis. Mauris luctus rutrum mi ut
-                        rhoncus. Integer in dignissim tortor. Lorem ipsum dolor
-                        sit amet, consectetur adipiscing ...
-                      </span>
-                    </span>
-                    <span class="blog-post-card3-text3">Read More</span>
-                  </div>
-                  <span class="blog-post-card3-text4">
-                    <span>by Jon Doe 5 hours ago</span>
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div
-              class="blog-post-card3-blog-post-card blog-post-card3-root-class-name"
-            >
-              <img
-                alt="image"
-                src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDExfHx3b3JrJTIwb2ZmaWNlfGVufDB8fHx8MTYyNjQ1MDgzMQ&amp;ixlib=rb-1.2.1&amp;h=1000"
-                class="blog-post-card3-image"
-              />
-              <div class="blog-post-card3-container">
-                <span class="blog-post-card3-text">
-                  <span>ENTERPRISE</span>
-                </span>
-                <h1 class="blog-post-card3-text1">
-                  <span>Lorem ipsum dolor sit amet</span>
-                </h1>
-                <div class="blog-post-card3-container1">
-                  <span class="blog-post-card3-text2">
-                    <span>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Sed non volutpat turpis. Mauris luctus rutrum mi ut
-                      rhoncus. Integer in dignissim tortor. Lorem ipsum dolor
-                      sit amet, consectetur adipiscing ...
-                    </span>
-                  </span>
-                  <span class="blog-post-card3-text3">Read More</span>
-                </div>
-                <span class="blog-post-card3-text4">
-                  <span>by Jon Doe 5 hours ago</span>
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="my-work-btn-group"></div>
-        </div>
-        <div class="my-work-banner2">
-          <h1 class="my-work-text20">BOOKS</h1>
-          <div class="my-work-blog2">
-            <div class="my-work-container07">
-              <div
-                class="blog-post-card3-blog-post-card blog-post-card3-root-class-name10"
-              >
-                <img
-                  alt="image"
-                  src="https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDF8fHdvcmtpbmclMjBkZXNrfGVufDB8fHx8MTYyNjI1MDYwMg&amp;ixlib=rb-1.2.1&amp;h=1200"
-                  class="blog-post-card3-image"
-                />
-                <div class="blog-post-card3-container">
-                  <span class="blog-post-card3-text">
-                    <span>ENTERPRISE</span>
-                  </span>
-                  <h1 class="blog-post-card3-text1">
-                    <span>Lorem ipsum dolor sit amet</span>
-                  </h1>
-                  <div class="blog-post-card3-container1">
-                    <span class="blog-post-card3-text2">
-                      <span>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Sed non volutpat turpis. Mauris luctus rutrum mi ut
-                        rhoncus. Integer in dignissim tortor. Lorem ipsum dolor
-                        sit amet, consectetur adipiscing ...
-                      </span>
-                    </span>
-                    <span class="blog-post-card3-text3">Read More</span>
-                  </div>
-                  <span class="blog-post-card3-text4">
-                    <span>by Jon Doe 5 hours ago</span>
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div class="my-work-container08">
-              <div
-                class="blog-post-card3-blog-post-card blog-post-card3-root-class-name11"
-              >
-                <img
-                  alt="image"
-                  src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDl8fHdvcmt8ZW58MHx8fHwxNjI2NDUwNzky&amp;ixlib=rb-1.2.1&amp;h=1000"
-                  class="blog-post-card3-image"
-                />
-                <div class="blog-post-card3-container">
-                  <span class="blog-post-card3-text">
-                    <span>ENTERPRISE</span>
-                  </span>
-                  <h1 class="blog-post-card3-text1">
-                    <span>Lorem ipsum dolor sit amet</span>
-                  </h1>
-                  <div class="blog-post-card3-container1">
-                    <span class="blog-post-card3-text2">
-                      <span>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Sed non volutpat turpis. Mauris luctus rutrum mi ut
-                        rhoncus. Integer in dignissim tortor. Lorem ipsum dolor
-                        sit amet, consectetur adipiscing ...
-                      </span>
-                    </span>
-                    <span class="blog-post-card3-text3">Read More</span>
-                  </div>
-                  <span class="blog-post-card3-text4">
-                    <span>by Jon Doe 5 hours ago</span>
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div
-              class="blog-post-card3-blog-post-card blog-post-card3-root-class-name9"
-            >
-              <img
-                alt="image"
-                src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDExfHx3b3JrJTIwb2ZmaWNlfGVufDB8fHx8MTYyNjQ1MDgzMQ&amp;ixlib=rb-1.2.1&amp;h=1000"
-                class="blog-post-card3-image"
-              />
-              <div class="blog-post-card3-container">
-                <span class="blog-post-card3-text">
-                  <span>ENTERPRISE</span>
-                </span>
-                <h1 class="blog-post-card3-text1">
-                  <span>Lorem ipsum dolor sit amet</span>
-                </h1>
-                <div class="blog-post-card3-container1">
-                  <span class="blog-post-card3-text2">
-                    <span>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Sed non volutpat turpis. Mauris luctus rutrum mi ut
-                      rhoncus. Integer in dignissim tortor. Lorem ipsum dolor
-                      sit amet, consectetur adipiscing ...
-                    </span>
-                  </span>
-                  <span class="blog-post-card3-text3">Read More</span>
-                </div>
-                <span class="blog-post-card3-text4">
-                  <span>by Jon Doe 5 hours ago</span>
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="my-work-btn-group2"></div>
-        </div>
-        <div class="my-work-banner3">
-          <h1 class="my-work-text21">YOUTUBE VIDEOS</h1>
-          <div class="my-work-blog3">
-            <div class="my-work-container09">
-              <video
-                src=""
-                muted=""
-                poster="https://play.teleporthq.io/static/svg/videoposter.svg"
-                autoplay=""
-                controls=""
-                class="my-work-video"
-              ></video>
-            </div>
-            <div class="my-work-container10">
-              <video
-                src=""
-                muted=""
-                poster="https://play.teleporthq.io/static/svg/videoposter.svg"
-                autoplay=""
-                controls=""
-                class="my-work-video1"
-              ></video>
-            </div>
-            <video
-              src=""
-              muted=""
-              poster="https://play.teleporthq.io/static/svg/videoposter.svg"
-              autoplay=""
-              controls=""
-              class="my-work-video2"
-            ></video>
-          </div>
-          <div class="my-work-btn-group3"></div>
-        </div>
-        <!-- <div class="my-work-section-separator1"></div> -->
-        <div class="my-work-banner4">
-          <h1 class="my-work-text22">FUTURE PLANS</h1>
-          <div class="my-work-blog4">
-            <div class="my-work-container11">
-              <div
-                class="blog-post-card3-blog-post-card blog-post-card3-root-class-name6"
-              >
-                <img
-                  alt="image"
-                  src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDl8fHdvcmt8ZW58MHx8fHwxNjI2NDUwNzky&amp;ixlib=rb-1.2.1&amp;h=1000"
-                  class="blog-post-card3-image"
-                />
-                <div class="blog-post-card3-container">
-                  <span class="blog-post-card3-text">
-                    <span>ENTERPRISE</span>
-                  </span>
-                  <h1 class="blog-post-card3-text1">
-                    <span>Lorem ipsum dolor sit amet</span>
-                  </h1>
-                  <div class="blog-post-card3-container1">
-                    <span class="blog-post-card3-text2">
-                      <span>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Sed non volutpat turpis. Mauris luctus rutrum mi ut
-                        rhoncus. Integer in dignissim tortor. Lorem ipsum dolor
-                        sit amet, consectetur adipiscing ...
-                      </span>
-                    </span>
-                    <span class="blog-post-card3-text3">Read More</span>
-                  </div>
-                  <span class="blog-post-card3-text4">
-                    <span>by Jon Doe 5 hours ago</span>
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div class="my-work-container12">
-              <div
-                class="blog-post-card3-blog-post-card blog-post-card3-root-class-name8"
-              >
-                <img
-                  alt="image"
-                  src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDl8fHdvcmt8ZW58MHx8fHwxNjI2NDUwNzky&amp;ixlib=rb-1.2.1&amp;h=1000"
-                  class="blog-post-card3-image"
-                />
-                <div class="blog-post-card3-container">
-                  <span class="blog-post-card3-text">
-                    <span>ENTERPRISE</span>
-                  </span>
-                  <h1 class="blog-post-card3-text1">
-                    <span>Lorem ipsum dolor sit amet</span>
-                  </h1>
-                  <div class="blog-post-card3-container1">
-                    <span class="blog-post-card3-text2">
-                      <span>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Sed non volutpat turpis. Mauris luctus rutrum mi ut
-                        rhoncus. Integer in dignissim tortor. Lorem ipsum dolor
-                        sit amet, consectetur adipiscing ...
-                      </span>
-                    </span>
-                    <span class="blog-post-card3-text3">Read More</span>
-                  </div>
-                  <span class="blog-post-card3-text4">
-                    <span>by Jon Doe 5 hours ago</span>
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div
-              class="blog-post-card3-blog-post-card blog-post-card3-root-class-name7"
-            >
-              <img
-                alt="image"
-                src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDl8fHdvcmt8ZW58MHx8fHwxNjI2NDUwNzky&amp;ixlib=rb-1.2.1&amp;h=1000"
-                class="blog-post-card3-image"
-              />
-              <div class="blog-post-card3-container">
-                <span class="blog-post-card3-text">
-                  <span>ENTERPRISE</span>
-                </span>
-                <h1 class="blog-post-card3-text1">
-                  <span>Lorem ipsum dolor sit amet</span>
-                </h1>
-                <div class="blog-post-card3-container1">
-                  <span class="blog-post-card3-text2">
-                    <span>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Sed non volutpat turpis. Mauris luctus rutrum mi ut
-                      rhoncus. Integer in dignissim tortor. Lorem ipsum dolor
-                      sit amet, consectetur adipiscing ...
-                    </span>
-                  </span>
-                  <span class="blog-post-card3-text3">Read More</span>
-                </div>
-                <span class="blog-post-card3-text4">
-                  <span>by Jon Doe 5 hours ago</span>
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="my-work-btn-group4"></div>
-        </div>
-        <!-- <div class="my-work-section-separator2"></div> -->
-        <div class="my-work-banner5">
-          <h2 class="my-work-text23">
-            <span>INTERNSHIP OPPORTUNITIES&nbsp;</span>
-            <br class="my-work-text25" />
-            <span></span>
-          </h2>
-          <button class="my-work-button button">Learn More</button>
         </div>
       </div>
+
+    <div class = "art"><h1>ARTICLES</h1>
+      <br>
+  
+  <div class="links-container">
+    
+    <div class="link" data-city="1">                      
+      <link href="https://www.google.com" target="_blank"><h2>An accurate finger vein based verification system</h2></a><br>
+      <h4>Publication year: 2015</h4>
+      <p style="font-family:'Courier New'"><h4>Description</h4></p>
+      
+      <p>This paper makes use of finger vein to propose an accurate personal authentication system. A matched filtering at various scales is applied on the vein image to reduce the effects of noise occurred due to non-uniform illumination<span class="dots">...</span><span class="more">low local contrast, hairs and skin texture. Vein image is also enhanced by using global characteristics. Local and global characteristics of enhanced vein images are fused to obtain accurate vein pattern. Extracted veins are used for matching such that the problem of geometric deformations can be handled efficiently. For performance evaluation, a publicly available database of 3132 unconstrained finger vein images acquired from 156 subjects is used. Performance of the proposed system is found to be better than the various existing systems.</span>
+          <button onclick="readMore('1')" class="myBtn">Read more</button></p>
+      
+      <a href = "1.pdf" download = "1.pdf" >  
+        <button class="bton"><b> download PDF </b>  </button>  
+       </a>
     </div>
+
+    <div class="link" data-city="2">
+      <link href="https://www.google.com" target="_blank"><h2>An accurate finger vein based verification system</h2></a>
+      <br>
+      <h4>Publication year: 2015</h4>
+      <h4>Description</h4>
+      
+      <p>This paper makes use of finger vein to propose an accurate personal authentication system. A matched filtering at various scales is applied on the vein image to reduce the effects of noise occurred due to non-uniform illumination<span class="dots">...</span><span class="more">low local contrast, hairs and skin texture. Vein image is also enhanced by using global characteristics. Local and global characteristics of enhanced vein images are fused to obtain accurate vein pattern. Extracted veins are used for matching such that the problem of geometric deformations can be handled efficiently. For performance evaluation, a publicly available database of 3132 unconstrained finger vein images acquired from 156 subjects is used. Performance of the proposed system is found to be better than the various existing systems.</span>
+          <button onclick="readMore('2')" class="myBtn">Read more</button></p>
+      
+      <a href = "dosfiles.pdf" download >  
+        <button class="bton"><b> download PDF </b>  </button>  
+       </a>
+    </div>
+
+    <div class="link" data-city="3">
+      <link href="https://www.google.com" target="_blank"><h2>An accurate finger vein based verification system</h2></a>
+      <br>
+      <h4>Publication year: 2015</h4>
+      <h4>Description</h4>
+      <p>This paper makes use of finger vein to propose an accurate personal authentication system. A matched filtering at various scales is applied on the vein image to reduce the effects of noise occurred due to non-uniform illumination<span class="dots">...</span><span class="more">low local contrast, hairs and skin texture. Vein image is also enhanced by using global characteristics. Local and global characteristics of enhanced vein images are fused to obtain accurate vein pattern. Extracted veins are used for matching such that the problem of geometric deformations can be handled efficiently. For performance evaluation, a publicly available database of 3132 unconstrained finger vein images acquired from 156 subjects is used. Performance of the proposed system is found to be better than the various existing systems.</span>
+          <button onclick="readMore('3')" class="myBtn">Read more</button></p>
+      
+      <a href = "dosfiles.pdf" download >  
+        <button class="bton"><b> download PDF </b>  </button>  
+       </a>
+    </div>
+
+    <div class="link" data-city="4">
+      <link href="https://www.google.com" target="_blank"><h2>An accurate finger vein based verification system</h2></a>
+      <br>
+      <h4>Publication year: 2015</h4>
+      <h4>Description</h4>
+      <p>This paper makes use of finger vein to propose an accurate personal authentication system. A matched filtering at various scales is applied on the vein image to reduce the effects of noise occurred due to non-uniform illumination<span class="dots">...</span><span class="more">low local contrast, hairs and skin texture. Vein image is also enhanced by using global characteristics. Local and global characteristics of enhanced vein images are fused to obtain accurate vein pattern. Extracted veins are used for matching such that the problem of geometric deformations can be handled efficiently. For performance evaluation, a publicly available database of 3132 unconstrained finger vein images acquired from 156 subjects is used. Performance of the proposed system is found to be better than the various existing systems.</span>
+          <button onclick="readMore('4')" class="myBtn">Read more</button></p>
+      
+      <a href = "dosfiles.pdf" download >  
+        <button class="bton"><b> download PDF </b>  </button>  
+       </a>
+    </div>
+
+    <div class="link" data-city="5">
+      <link href="https://www.google.com" target="_blank"><h2>An accurate finger vein based verification system</h2></a>
+      <br>
+      <h4>Publication year: 2015</h4>
+      <h4>Description</h4>
+      <p>This paper makes use of finger vein to propose an accurate personal authentication system. A matched filtering at various scales is applied on the vein image to reduce the effects of noise occurred due to non-uniform illumination<span class="dots">...</span><span class="more">low local contrast, hairs and skin texture. Vein image is also enhanced by using global characteristics. Local and global characteristics of enhanced vein images are fused to obtain accurate vein pattern. Extracted veins are used for matching such that the problem of geometric deformations can be handled efficiently. For performance evaluation, a publicly available database of 3132 unconstrained finger vein images acquired from 156 subjects is used. Performance of the proposed system is found to be better than the various existing systems.</span>
+          <button onclick="readMore('5')" class="myBtn">Read more</button></p>
+      
+      <a href = "dosfiles.pdf" download >  
+        <button class="bton"><b> download PDF </b>  </button>  
+       </a>
+    </div>
+
+    <div class="link" data-city="6">
+      <link href="https://www.google.com" target="_blank"><h2>An accurate finger vein based verification system</h2></a>
+     <br>
+      <h4>Publication year: 2015</h4>
+      <h4>Description</h4>
+      <p>This paper makes use of finger vein to propose an accurate personal authentication system. A matched filtering at various scales is applied on the vein image to reduce the effects of noise occurred due to non-uniform illumination<span class="dots">...</span><span class="more">low local contrast, hairs and skin texture. Vein image is also enhanced by using global characteristics. Local and global characteristics of enhanced vein images are fused to obtain accurate vein pattern. Extracted veins are used for matching such that the problem of geometric deformations can be handled efficiently. For performance evaluation, a publicly available database of 3132 unconstrained finger vein images acquired from 156 subjects is used. Performance of the proposed system is found to be better than the various existing systems.</span>
+          <button onclick="readMore('6')" class="myBtn">Read more</button></p>
+      
+      <a href = "" download >  
+        <button class="bton"><b> download PDF </b>  </button>  
+       </a>
+    </div>
+   
   </div>
+  <br>
+  <div class = "arts"><h1>PROJECTS</h1><div>
+  <div class = "proj">
+    {% comment %} <div class="project">
+      <div class="project-item">
+        <label>Title:</label>
+        <span id="title"></span>
+      </div>
+      <div class="project-item">
+        <label>Sponsor:</label>
+        <span id="sponsor"></span>
+      </div>
+      <div class="project-item">
+        <label>Duration:</label>
+        <span id="duration"></span>
+      </div>
+      <div class="project-item">
+        <label>Status:</label>
+        <span id="status"></span>
+      </div>
+    </div> {% endcomment %}
+
+    
+    <div class="project">
+      <div class="project-item">
+        <label><h1>TITLE</h1><a href="" style = "font-weight:400">Heart rate monitoring from non-contact face videos using Deep Learning</a></label>
+        {% comment %} <span id="title"></span> {% endcomment %}
+      </div>
+
+      <div class="project-item">
+        <label><b style = "font-weight:600">Project Investigator</b></label>
+        <span id="title"></span>
+      </div>
+      <div class="project-item">
+        <label><b style = "font-weight:600">Sponsor:</b> </label>
+        <span id="sponsor"></span>
+      </div>
+      <div class="project-item">
+        <label>Duration: 2020-2023</label>
+        <span id="duration"></span>
+      </div>
+      <div class="project-item">
+        <label>Status:</label>
+        <span id="status"></span>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-item">
+        <label><h1>TITLE</h1><a href="" style = "font-weight:400">Heart rate monitoring from non-contact face videos using Deep Learning</a></label>
+        {% comment %} <span id="title"></span> {% endcomment %}
+      </div>
+
+      <div class="project-item">
+        <label><b style = "font-weight:600">Project Investigator</b></label>
+        <span id="titl"></span>
+      </div>
+      <div class="project-item">
+        <label><b style = "font-weight:600">Sponsor:</b> </label>
+        <span id="sponso"></span>
+      </div>
+      <div class="project-item">
+        <label>Duration: 2020-2023</label>
+        <span id="duratio"></span>
+      </div>
+      <div class="project-item">
+        <label>Status:</label>
+        <span id="statu"></span>
+      </div>
+    </div>
+
+    
+    <div class="project">
+      <div class="project-item">
+        <label><h1>TITLE</h1><a href="" style = "font-weight:400">Heart rate monitoring from non-contact face videos using Deep Learning</a></label>
+        {% comment %} <span id="title"></span> {% endcomment %}
+      </div>
+
+      <div class="project-item">
+        <label><b style = "font-weight:600">Project Investigator</b></label>
+        <span id="tit"></span>
+      </div>
+      <div class="project-item">
+        <label><b style = "font-weight:600">Sponsor:</b> </label>
+        <span id="spons"></span>
+      </div>
+      <div class="project-item">
+        <label>Duration: 2020-2023</label>
+        <span id="durati"></span>
+      </div>
+      <div class="project-item">
+        <label>Status:</label>
+        <span id="stat"></span>
+      </div>
+    </div>
+
+    
+    
+  </div>
+
+</div>
+</body>
+<script>
+  const links = document.querySelectorAll('.link a');
+  links.forEach(link => link.setAttribute('target', '_blank'));
+
+  function myFunction() {
+    var dots = document.getElementById("dots");
+    var moreText = document.getElementById("more");
+    var btnText = document.getElementById("myBtn");
+  
+    if (dots.style.display === "none") {
+      dots.style.display = "inline";
+      btnText.innerHTML = "Read more"; 
+      moreText.style.display = "none";
+    } else {
+      dots.style.display = "none";
+      btnText.innerHTML = "Read less"; 
+      moreText.style.display = "inline";
+    }
+  }
+
+  function readMore(city) {
+    let dots = document.querySelector(`.link[data-city="${city}"] .dots`);
+    let moreText = document.querySelector(`.link[data-city="${city}"] .more`); 
+    let btnText = document.querySelector(`.link[data-city="${city}"] .myBtn`);
+
+    if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        btnText.textContent = "Read more";
+        moreText.style.display = "none";
+    } else {
+        dots.style.display = "none";
+        btnText.textContent = "Read less"; 
+        moreText.style.display = "inline";
+    }
+}
+
+const title = document.getElementById("title");
+const sponsor = document.getElementById("sponsor");
+const duration = document.getElementById("duration");
+const status = document.getElementById("status");
+
+title.innerText = "Project X";
+sponsor.innerText = "ABC Company";
+duration.innerText = "6 months";
+status.innerText = "In Progress";
+
+const titl = document.getElementById("titl");
+const sponso = document.getElementById("sponso");
+const duratio = document.getElementById("duratio");
+const statu = document.getElementById("statu");
+
+titl.innerText = "Project X";
+sponso.innerText = "ABC Company";
+duratio.innerText = "6 months";
+statu.innerText = "In Progress";
+
+const tit = document.getElementById("tit");
+const spons = document.getElementById("spons");
+const durati = document.getElementById("durati");
+const stat = document.getElementById("stat");
+
+tit.innerText = "Project X";
+spons.innerText = "ABC Company";
+durati.innerText = "6 months";
+stat.innerText = "In Progress";
+
+function pageScroll() {
+  window.scrollBy(0,50); // horizontal and vertical scroll increments
+  scrolldelay = setTimeout('pageScroll()',100); // scrolls every 100 milliseconds
+}
+</script>
+
+                
     {% endblock content %}
     {% block scripts %}
    
