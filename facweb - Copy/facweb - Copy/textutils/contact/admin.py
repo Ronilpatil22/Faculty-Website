@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from .models import contacts
+from .models import getintouch_details
 # Register your models here.
 class restricted_to_1(admin.ModelAdmin):
     def add_view(self, request, form_url='', extra_context=None):
@@ -13,3 +14,4 @@ class restricted_to_1(admin.ModelAdmin):
     
 
 admin.site.register(contacts,restricted_to_1)
+admin.site.register(getintouch_details)
