@@ -1,4 +1,5 @@
 from django.db import models
+from datetime import date
 # Create your models here.
 class contacts(models.Model):
     BIG_TEXT_LEFT = models.CharField(max_length=2000,blank=True)
@@ -16,4 +17,6 @@ class getintouch_details(models.Model):
     Email = models.EmailField(max_length=2000)
     Subject = models.CharField(max_length=10000,default=Name)
     Message = models.CharField(max_length=10000000)
-    date_time=models.DateTimeField(blank=True)
+
+    def __str__(self):
+        return self.Name

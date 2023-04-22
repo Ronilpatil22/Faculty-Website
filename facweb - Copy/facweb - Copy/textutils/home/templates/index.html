@@ -36,13 +36,14 @@
               src="{{introductions.Profile_image.url}}"
               class="home-image1"
             />
-            {%endfor%}
+            
           </div>
         </div>
         <div class="home-testimonial">
           <div class="home-container3">
             <h1 class="home-text07">
-              <span>What Ex-Students Are Saying?</span>
+
+              <span>{{introductions.Testimonial_section_title}}</span>
               <br />
             </h1>
 
@@ -92,14 +93,10 @@
            
             <span class="home-text10">
               <span class="home-text11">
-                Fill this form for sunmitting your own testimonials.
+                {{introductions.Testimonial_section_lower_title}}
               </span>
-              <br class="home-text12" />
-              <span class="home-text13">
-                (remember that the decision to include it will be in the hands
-                of admin
-              </span>
-              <span>)</span>
+              {% endfor %}
+              <span></span>
               <br />
             </span>
           </div>

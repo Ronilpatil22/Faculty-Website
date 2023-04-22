@@ -9,16 +9,19 @@
     <meta property="twitter:card" content="summary_large_image" />
     <title>{% block title %}{% endblock title %}</title>
     {% load bootstrap5%}
-    {% bootstrap_css %}
-    {% bootstrap_javascript %}
     {% load static %}
+    {% bootstrap_css %}
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Courgette|Dancing+Script|Great+Vibes|Lobster+Two|Open+Sans|Pinyon+Script|Satisfy" rel="stylesheet">
+    {% bootstrap_javascript %}
     {% load bootstrap_icons %}
+
     {% block head %}{% endblock head %}
     <style data-tag="reset-style-sheet">
             html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
     </style>
-    <link rel="stylesheet" href="{% static 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %}">
-    <link href="{% static 'https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' %}" rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,700" rel='stylesheet' type='text/css'>
     <style data-tag="default-style-sheet">
         html {
           font-family: Arial;
@@ -36,94 +39,97 @@
           background-color: var(--dl-color-gray-white);
   
         }
-    </style>
+
+
+      </style>
     <script src="https://kit.fontawesome.com/c75ce72430.js" crossorigin="anonymous"></script>
     <link
       rel="stylesheet"
-      href="{% static 'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&amp;display=swap' %}"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&amp;display=swap"
       data-tag="font"
     />
     <link
       rel="stylesheet"
-      href="{% static 'https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap' %}"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
       data-tag="font"
     />
     <link
       rel="stylesheet"
-      href="{% static 'https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&amp;display=swap' %}"
+      href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&amp;display=swap"
       data-tag="font"
     />
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
     <link href="{% static 'css/home.css' %}" rel="stylesheet" />
+    <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+
+    <!-- Bootstrap CSS -->
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="{% static 'css/styleit.css' %}">
+    <link rel="stylesheet" href="{% static 'css/burgermenu.css' %}">
+    <link rel="stylesheet" href="{% static 'js/burgermenu.js' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+
+
     <script src="{% static 'js/script.js'%}"></script>
-    <script src="{% static 'https://code.jquery.com/jquery-3.3.1.js' %}"></script>
-     <script src="{% static 'https://unpkg.com/@teleporthq/teleport-custom-scripts'%}"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://kit.fontawesome.com/c75ce72430.js" crossorigin="anonymous"></script>
+     <script src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
+     <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+     <script src="{% static 'js/template.js' %}"></script>
+     <script src="{% static 'js/popper.min.js' %}"></script>
+     <script src="{% static 'js/jquery.sticky.js' %}"></script>
+     <script src="{% static 'js/main.js' %}"></script>
   </head>
   <body>
-    <div data-role="Header" class="home-navbar-container">
-        <div class="home-navbar">
-          {%for Navbar_icon in Navbar_icon %}
-          <a href="/{{Navbar_icon.ICON_LINK}}/" class="home-navlink">
-            <img
-              alt="image"
-              src="{{Navbar_icon.ICON.url}}"
-              class="home-image"
-            />
-          </a>
-{% endfor %}
-{%for Navbar in navbar %}
-          <div class="home-links-container">
-            <a href="/{{Navbar.SECTION_LINK}}/" class="home-link0{{Navbar.id}} Navbar-Link">
-              {{Navbar.SECTION_NAME}}
-            </a>
-          </div>
-          {%endfor%}
-          <div data-role="BurgerMenu" class="home-burger-menu">
-            <svg viewBox="0 0 1024 1024" class="home-icon">
-              <path
-                d="M128 256h768v86h-768v-86zM128 554v-84h768v84h-768zM128 768v-86h768v86h-768z"
-              ></path>
-            </svg>
-          </div>
-          <div data-role="MobileMenu" class="home-mobile-menu">
-            <div class="home-container1">
-              <span class="Card-Heading home-heading">Logo</span>
-              <div data-role="CloseMobileMenu" class="home-close-menu">
-                <svg viewBox="0 0 1024 1024" class="home-icon02">
-                  <path
-                    d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"
-                  ></path>
-                </svg>
-              </div>
-            </div>
-            <div class="home-links-container1">
-              {%for Navbar in navbar %}
-              <a href="/{{Navbar.SECTION_LINK}}/" class="home-link0{{Navbar.id}} Navbar-Link">
-                {{Navbar.SECTION_NAME}}
-              </a>
-              {%endfor%}
-            </div>
-          </div>
-        </div>
-      </div>
-      {% block content %}{% endblock content %}
-      <!-- Footer -->
-      <div class="home-footer-container">
-        {% comment %} <div class="home-social-bar"><h1>Follow Me On Social Media</h1><br></div> {% endcomment %}
-        <div class="home-social-bar">
-          {%for socialmediabar in socialmedia%}
-          {% comment %} {% if socialmediabar.image__isnull %} {% endcomment %}
-          <a href="{{socialmediabar.icon_link}}" class="home-icon" style="size:3em"><i class="{{socialmediabar.icon}}"></i></a>
-          {% comment %} {% else %} {% endcomment %}
-          {% comment %} <a href="{{socialmediabar.icon_link}}" class="home-image3" style="size:3em"><img src="{{socialmediabar.image.url}}"></a> {% endcomment %}
-          {% comment %} {%endif%} {% endcomment %}
 
-          {% endfor %}
+      <nav class="navbar">
+        <div class="navbar-container container">
+            <input type="checkbox" name="" id="">
+            {%for Navbar_icon in Navbar_icon %}
+            <a href="/{{Navbar_icon.ICON_LINK}}/" class="logo">
+              <img
+                alt="image"
+                src="{{Navbar_icon.ICON.url}}"
+                class="logo"
+              />
+            </a>
+  {% endfor %}
+  <div class="hamburger-lines">
+    <span class="line line1"></span>
+    <span class="line line2"></span>
+    <span class="line line3"></span>
+  </div>
+  <ul class="menu-items" >
+              {%for Navbar in navbar %}
+                <li><a href="/{{Navbar.SECTION_LINK}}/">{{Navbar.SECTION_NAME}}</a></li>
+                {% endfor %}
+            </ul>
         </div>
-        <!-- <div class="home-section-separator5"></div> -->
+    </nav>
+
+      
+      {% block content %}{% endblock content %}
+     
+        <footer class="content-footer">
+          {%for socialmediabarmessage in socialmediabarmessage%}
+          <p>{{socialmediabarmessage.Text}}</p>
+          {%endfor%}
+          <ul class="social">
+            {%for socialmediabar in socialmedia%}
+              <li><a class="css-is-deranged" id="socialmediaicon" href="{{socialmediabar.Link}}">{{socialmediabar.Name}}</a></li>
+              {%endfor%}
+          </ul>
+        
+      </footer>
         <div class="home-footer">
           <div class="home-container6">
-            <span>Created by Ronil and Yash (Click <a href="/creators/"> 
+            <span style="font-family:'Roboto Condensed', sans-serif; ">Created by Ronil and Yash (Click <a href="/creators/"> 
               <b>Here</b>
             </a> to Know More)</span>
           </div>
@@ -136,293 +142,9 @@
             <span class="Anchor">Copyright, 2021</span>
           </div>
         </div>
-      </div>
-      {% block scripts %}
      
-      
-//TELEPORTHQ CUSTOM SCRIPTS
-(function () {
-  class Menu {
-    init = () => {
-      this.getMenuElementsAndAddEvents();
-      this.getMenuElementsAndAddEventsByDataAttrs("type");
-      this.getMenuElementsAndAddEventsByDataAttrs("role");
-      this.getNavbarElementsAndAddEventsByDataThqAttrs();
-      return this;
-    };
+      {% block scripts %}
 
-    getMenuElementsAndAddEventsByDataAttrs = (dataAttr) => {
-      const allHeaders = teleport.getAllElementsByDataAttribute(
-        "role",
-        "Header"
-      );
-
-      allHeaders.forEach((header) => {
-        const burgerBtn = teleport.getElByDataAttribute(
-          dataAttr,
-          "BurgerMenu",
-          header
-        );
-        const mobileMenu = teleport.getElByDataAttribute(
-          dataAttr,
-          "MobileMenu",
-          header
-        );
-        const closeBtn = teleport.getElByDataAttribute(
-          dataAttr,
-          "CloseMobileMenu",
-          header
-        );
-
-        if (!burgerBtn || !mobileMenu || !closeBtn) {
-          return;
-        }
-
-        burgerBtn.addEventListener("click", () => {
-          mobileMenu.classList.add("teleport-show");
-        });
-
-        closeBtn.addEventListener("click", () => {
-          mobileMenu.classList.remove("teleport-show");
-        });
-      });
-    };
-
-    getNavbarElementsAndAddEventsByDataThqAttrs = () => {
-      const allNavbars = teleport.getAllElementsByDataAttribute(
-        "thq",
-        "thq-navbar"
-      );
-
-      const bodyOverflow = document.body.style.overflow;
-
-      allNavbars.forEach((navbar) => {
-        const burgerBtn = teleport.getElByDataAttribute(
-          "thq",
-          "thq-burger-menu",
-          navbar
-        );
-        const mobileMenu = teleport.getElByDataAttribute(
-          "thq",
-          "thq-mobile-menu",
-          navbar
-        );
-        const closeBtn = teleport.getElByDataAttribute(
-          "thq",
-          "thq-close-menu",
-          navbar
-        );
-
-        if (!burgerBtn || !mobileMenu || !closeBtn) {
-          return;
-        }
-
-        burgerBtn.addEventListener("click", () => {
-          window.addEventListener(
-            "click",
-            function checkSameLinkClicked(event) {
-              if (!event) {
-                return;
-              }
-              if (!event.target.href) {
-                return;
-              }
-              if (!mobileMenu) {
-                return;
-              }
-
-              if (event.target.href) {
-                document.body.style.overflow = bodyOverflow;
-              }
-
-              if (event.target.pathname === window.location.pathname) {
-                mobileMenu.classList.remove("teleport-show");
-                mobileMenu.classList.remove("thq-show");
-                mobileMenu.classList.remove("thq-translate-to-default");
-              }
-
-              this.removeEventListener("click", checkSameLinkClicked);
-            }
-          );
-          document.body.style.overflow = "hidden";
-
-          mobileMenu.classList.add("teleport-show");
-          mobileMenu.classList.add("thq-show");
-          mobileMenu.classList.add("thq-translate-to-default");
-        });
-
-        closeBtn.addEventListener("click", () => {
-          document.body.style.overflow = bodyOverflow;
-
-          mobileMenu.classList.remove("teleport-show");
-          mobileMenu.classList.remove("thq-show");
-          mobileMenu.classList.remove("thq-translate-to-default");
-        });
-      });
-    };
-
-    getMenuElementsAndAddEvents = () => {
-      const menuElements = teleport.getAllElByClass("teleport-menu-burger");
-
-      if (menuElements.length === 0) {
-        teleport.log("No teleport-menu-burger items found");
-        return;
-      }
-
-      menuElements.forEach((burgerMenuElement) => {
-        const mobileMenuElement =
-          burgerMenuElement.nextElementSibling?.className.includes(
-            "teleport-menu-mobile"
-          )
-            ? burgerMenuElement.nextElementSibling
-            : null;
-        if (!mobileMenuElement) {
-          teleport.log(
-            `${burgerMenuElement} has no corresponding element with class 'teleport-menu-mobile' as the next sibling.`
-          );
-          return;
-        }
-
-        const closeMenuElement = mobileMenuElement.querySelector(
-          '*[class*="teleport-menu-close"]'
-        );
-        if (!closeMenuElement) {
-          teleport.log(
-            `${mobileMenuElement} has no child element with class 'teleport-menu-close'`
-          );
-          return;
-        }
-
-        burgerMenuElement.addEventListener("click", () => {
-          mobileMenuElement.classList.add("teleport-show");
-        });
-        closeMenuElement.addEventListener("click", () => {
-          mobileMenuElement.classList.remove("teleport-show");
-        });
-      });
-    };
-  }
-
-  class Accordion {
-    init = () => {
-      this.getAccordionElementsAndAddEvents("type");
-      this.getAccordionElementsAndAddEvents("role");
-    };
-
-    getAccordionElementsAndAddEvents = (dataAttr) => {
-      const allAccordions = teleport.getAllElementsByDataAttribute(
-        "role",
-        "Accordion"
-      );
-
-      allAccordions.forEach((accordion) => {
-        const accordionHeader = teleport.getElByDataAttribute(
-          dataAttr,
-          "AccordionHeader",
-          accordion
-        );
-        const accordionContent = teleport.getElByDataAttribute(
-          dataAttr,
-          "AccordionContent",
-          accordion
-        );
-
-        if (!accordionHeader || !accordionContent) {
-          return;
-        }
-
-        accordionHeader.addEventListener("click", () => {
-          accordionContent.style.maxHeight
-            ? (accordionContent.style.maxHeight = "")
-            : (accordionContent.style.maxHeight = `${accordionContent.scrollHeight}px`);
-        });
-      });
-    };
-  }
-
-  const listenForUrlChanges = () => {
-    let url = location.href;
-    document.body.addEventListener(
-      "click",
-      () => {
-        requestAnimationFrame(() => {
-          if (url !== location.href) {
-            new Menu().init();
-            new Accordion().init();
-            url = location.href;
-          }
-        });
-      },
-      true
-    );
-  };
-
-  const teleport = {
-    debug: false,
-    log: (msg, obj) => {
-      if (teleport.debug) {
-        console.log("teleport: " + msg, obj || "");
-      }
-    },
-    error: (msg, object) => {
-      console.error("teleport-error: " + msg, object);
-    },
-    getElByClass: (className) => {
-      const el = document.querySelector(`*[class*="${className}"]`);
-      if (!el) {
-        teleport.log(`did not find element with "${className}" class`);
-      }
-      return el;
-    },
-    getElByDataAttribute: (attribute, value, scope = document) => {
-      const el = scope.querySelector(`[data-${attribute}="${value}"]`);
-      if (!el) {
-        teleport.log(`did not find element with "data-${attribute}=${value}"`);
-      }
-      return el;
-    },
-    getAllElByClass: (className) => {
-      const elements = document.querySelectorAll(`*[class*="${className}"]`);
-      if (!elements) {
-        teleport.log(`did not find any elements with "${className}" class`);
-      }
-      return elements;
-    },
-    getAllElementsByDataAttribute: (attribute, value, scope = document) => {
-      const elements = scope.querySelectorAll(`[data-${attribute}="${value}"]`);
-      if (!elements) {
-        teleport.log(
-          `did not find any elements with "data-${attribute}=${value}"`
-        );
-      }
-      return elements;
-    },
-    Menu,
-    Accordion,
-  };
-
-  const appDiv = document.getElementById("app");
-
-  if (appDiv) {
-    const observer = new MutationObserver(() => {
-      new Menu().init();
-      new Accordion().init();
-      observer.disconnect();
-      delete observer;
-    });
-    observer.observe(document.getElementById("app"), { childList: true });
-  } else {
-    new Menu().init();
-    new Accordion().init();
-  }
-
-  listenForUrlChanges();
-})()
-
-
-
-
-console.log("HELLO")
       {% endblock scripts %}
   </body>
   </html>

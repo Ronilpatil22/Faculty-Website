@@ -11,11 +11,11 @@
 			<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-md-12">
+					{% for contacts in contact %}
 					<div class="wrapper">
 						<div class="row no-gutters">
 							<div class="col-lg-8 col-md-7 order-md-last d-flex align-items-stretch">
 								<div class="contact-wrap w-100 p-md-5 p-4">
-									{% for contacts in contact %}
 									<h3 class="mb-4">{{contacts.FORM_BIG_TEXT}}</h3>
 									<div id="form-message-warning" class="mb-4"></div> 
 				      		<div id="form-message-success" class="mb-4">
@@ -96,8 +96,8 @@
 					          </div>
 				          </div>
 			          </div>
+					</div>
 					{% endfor %}
-							</div>
 							
 						</div>
 					</div>

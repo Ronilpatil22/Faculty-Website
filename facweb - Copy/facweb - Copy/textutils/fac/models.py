@@ -13,12 +13,12 @@ class Navbar_icon(models.Model):
     ICON_LINK = models.CharField(max_length=200,blank=True,choices=[("index","Home Page"),("mywork","My Work Section"),("aboutme","About Me Section"),("contact","Contact Me Section"),("research","Research Group Section"),("students","Students Portal Section"),("discussion","Discussion Section"),("creators","Creators Section")])
 
 class socialmediabar(models.Model):
-    name = models.CharField(max_length=2000)
-    icon = models.CharField(max_length=2000,blank=True)
-    image = models.ImageField(upload_to='images/socialmedia',blank=True)
-    icon_link = models.URLField()
+    Name = models.CharField(max_length=2000)
+    Link = models.URLField()
     
     def __str__(self):
-        return self.name
-    
+        return self.Name
+
+class socialmediabarmessage(models.Model):
+    Text = models.CharField(max_length=2000)
 

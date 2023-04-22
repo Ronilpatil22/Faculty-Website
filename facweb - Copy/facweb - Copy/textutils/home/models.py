@@ -10,6 +10,8 @@ class introductions(models.Model):
     LINK_1_URL = models.CharField(max_length=200,blank=True,choices=[("index","Home Page"),("mywork","My Work Section"),("aboutme","About Me Section"),("contact","Contact Me Section"),("research","Research Group Section"),("students","Students Portal Section"),("discussion","Discussion Section")])
     LINK_2 = models.CharField(max_length=200,blank=True)
     LINK_2_URL = models.CharField(max_length=200,blank=True,choices=[("index","Home Page"),("mywork","My Work Section"),("aboutme","About Me Section"),("contact","Contact Me Section"),("research","Research Group Section"),("students","Students Portal Section"),("discussion","Discussion Section")])
+    Testimonial_section_title = models.CharField(max_length=200,blank=True)
+    Testimonial_section_lower_title = models.CharField(max_length=200,blank=True)
 
     
 class testimonials(models.Model):
@@ -27,3 +29,4 @@ class newsletter(models.Model):
     MEDIUM_TEXT = models.CharField(max_length=200,blank=True)
     SMALL_TEXT = models.CharField( max_length=2000,blank=True)
     IMAGE = models.ImageField(upload_to='images/newsletter',blank=True)
+

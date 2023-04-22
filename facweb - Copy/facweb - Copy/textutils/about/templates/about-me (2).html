@@ -7,6 +7,7 @@
     .about-us {
         background-color: #f2f2f2;
         padding: 40px;
+        padding-top : 100px;
     }
 
     .container {
@@ -98,154 +99,127 @@
         display: inline-block;
     }
 
-        {
-        % comment %
-    }
 
-    {% comment %} a:hover, {% endcomment %}
-    a:active {
-        background-color: red;
-    }
-
-        {
-        % endcomment %
-    }
-
-        {
-        % comment %
-    }
-
-    .dropdown a:hover {
-        background-color: #ddd;
-    }
-
-        {
-        % endcomment %
-    }
 
     .show {
         display: block;
     }
 </style>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
 {% endblock head %}
 {% block content %}
 <link href="{% static 'css/about-me.css' %}" rel="stylesheet" />
-<div>
-    <link rel="stylesheet" href="ab.css">
-    <section class="about-us">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <img src="{% static 'images/puneet sir.jpeg'%}" width="360" height="300" alt="Our Team">
-                    <div class="tx">
-                        <h4 style="font-family:verdana"> Hello Everyone, Myself Puneet Gupta</h4>
-                        <h4 style="font-family:verdana"> For any queries contact me</h4>
-                        {% comment %} <p style="font-family:verdana">This is a paragraph.</p> {% endcomment %}
-                    </div>
-                    <br>
-                    <div class="bu">
-                        <a href="/contact/" class="home-link05 Navbar-Link">Contact</a>
-                        {% comment %} <a href="/contact/" target="_blank">contact</a> {% endcomment %}
-                    </div>
-
-
-
-                </div>
-                <div class="col-md-6">
-                    <h2>Qualification and Achievements</h2>
-                    <p >I am a professor with a PhD in Computer Science from XYZ University. I have published numerous
-                        research papers in top-tier conferences and journals in the field of Artificial Intelligence and
-                        Machine Learning. My research has been funded by several government agencies and private
-                        organizations. I have also won several awards and recognitions for my research contributions..
-                    </p>
-                    <h2>Experiences and Projects</h2>
-                    <p>I have been teaching at ABC College for over 10 years. During this time, I have taught several
-                        courses in Computer Science, including Artificial Intelligence, Machine Learning, and Data
-                        Mining. I have also supervised several undergraduate and graduate students in their research
-                        projects..</p>
-                    <!-- <div class="dropdown">
-                        <button onclick="myFunction()" class="dropbtn">Projects</button>
-                        <div id="myDropdown" class="dropdown-content">
-                            <a href="#home">Faculty Website</a>
-                            <a href="#about">Software</a>
-                            <a href="#contact">AI model of scanner</a>
+<link href="{% static 'css/template_about.css' %}" rel="stylesheet" />
+<div class="home-container" style="width:100%">
+    <section style="width:100%">
+        <div style="width:100%">
+    <section class="about-us" style="width:100%">
+        <div class="container" style="width:100%">
+            <div class="row" style="width:100%">
+                <div class="container-fluid" style="width:100%">
+                    <div class="row" style="width:100%">
+                      <div class="col-lg-5 col-md-5 col-sm-8 col-xs-9 bhoechie-tab-container" style="height: 100%;width: 100%">
+                        <div class="col-lg-5 col-md-3 col-sm-5 col-xs-5 bhoechie-tab-menu">
+                          <div class="list-group" style="height: 500px;width: 50vw">
+                            <a href="#" class="list-group-item active text-center">CURRENT EMPLOYMENT</a>
+                            <a href="#" class="list-group-item text-center">PREVIOUS EMPLOYMENT</a>
+                            <a href="#" class="list-group-item text-center">PROJECTS</a>
+                            <a href="#" class="list-group-item text-center">INTERNATIONAL JOURNALS</a>
+                            <a href="#" class="list-group-item text-center">CONFERENCE PAPERS</a>
+                            <a href="#" class="list-group-item text-center">PATENTS</a>
+                            <a href="#" class="list-group-item text-center">BOOK CHAPTERS</a>
+                            <a href="#" class="list-group-item text-center">ACHIEVEMENTS AND OUTREACH</a>
+                            <a href="#" class="list-group-item text-center">AWARDS AND RECOGNITION</a>
+                            <a href="#" class="list-group-item text-center">COURSES TAUGHT</a>
                         </div>
-                        
-                    </div> -->
-
-                    <div class="dropdown">
-                        <button onclick="yFunction()" class="dropbtn">Guest Lectures</button>
-                        <div id="myDropdown" class="dropdown-content">
-                            <a href="#home">IIT INDORE</a>
-                            <a href="#about">IIT BOMBAY</a>
-                            <a href="#contact">IIT NANDED</a>
+                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 bhoechie-tab" style="height: 100%;width: 100%">
+                          <div class="bhoechie-tab-content active" >
+                              <h5  style="height: 100%;width: 100%">CURRENT EMPLOYMENT</h5><br>
+                              {%for current_employment in current_employment%}
+                              <p style="height: 100%;width: 35vw">{{current_employment.Text}}</p>
+                              {%endfor%}
+                          </div>
+                          <div class="bhoechie-tab-content">
+                              <h5>PREVIOUS EMPLOYMENT</h5><br>
+                              {%for previous_employment in previous_employment%}
+                              <p style="height: 100%;width: 35vw">{{previous_employment.Text}}</p>
+                              {%endfor%}
+                          </div>
+                  
+                          <div class="bhoechie-tab-content">
+                              <h5>PROJECTS</h5><br>
+                              <ul>
+                                {%for projects in projects%}
+                                <li><h4 style="font-family:roboto">{{projects.Title}}</h4>
+                                    <b>Project Investigator :</b> <p>{{projects.Project_investigator}}</p>
+                                    <b>Sponsoring :</b> <p>{{projects.Sponsoring}}</p>
+                                    <b>Duration :</b> <p>{{projects.Duration}}</p>
+                                    <b>Status :</b> <p>{{projects.Status}}</p>
+                                </li>
+                                {%endfor%}
+                              </ul>
+                            </div>
+                          <div class="bhoechie-tab-content">
+                              <h5>INTERNATIONAL JOURNALS(PUBLISHED)</h5><br>
+                              {%for international_journal in international_journal%}
+                              <p style="height: 100%;width: 35vw">{{international_journal.Text}}</p>
+                              {%endfor%}
+                          </div>
+                          <div class="bhoechie-tab-content">
+                              <h5>CONFERENCE PAPERS(PUBLISHED IN PROCEEDINGS)</h5><br>
+                              {%for conference_papers in conference_papers%}
+                              <p style="height: 100%;width: 35vw">{{conference_papers.Text}}</p>
+                              {%endfor%}
+                          </div>
+                          <div class="bhoechie-tab-content">
+                              <h5>PATENTS</h5><br>
+                              {%for patents in patents%}
+                              <p style="height: 100%;width: 35vw">{{patents.Text}}</p>
+                              {%endfor%}
+                          </div>
+                          <div class="bhoechie-tab-content">
+                              <h5>BOOK CHAPTERS</h5><br>
+                              {%for book_chapters in book_chapters%}
+                              <p style="height: 100%;width: 35vw">{{book_chapters.Text}}</p>
+                              {%endfor%}
+                          </div>
+                          <div class="bhoechie-tab-content">
+                              <h5>ACHIEVEMENTS AND OUTREACH</h5><br>
+                              {%for achievements_outreach in achievements_outreach%}
+                              <p style="height: 100%;width: 35vw">{{achievements_outreach.Text}}</p>
+                              {%endfor%}
+                          </div>
+                          <div class="bhoechie-tab-content">
+                              <h5>AWARDS</h5><br>
+                              <ul>
+                                {%for awards in awards%}
+                                <li>
+                                    <b>Name :</b> <p>{{awards.Name}}</p>
+                                    <b>Awarding Agency :</b> <p>{{awards.Awarding_agency}}</p>
+                                    <b>Year :</b> <p>{{awards.Year}}</p>
+                                </li>
+                                {%endfor%}
+                              </ul>
+                          </div>
+                          <div class="bhoechie-tab-content">
+                              <h5>COURSES</h5><br>
+                              {%for courses in courses%}
+                              <p style="height: 100%;width: 35vw">{{courses.Text}}</p>
+                              {%endfor%}
+                          </div>
                         </div>
                     </div>
-
-
-                    <div class="dropdown">
-                        <button onclick="myFunction()" class="dropbtn">Courses Taught</button>
-                        <div id="myDropdow" class="dropdown-content">
-                            <a href="#home">B.A.</a>
-                            <a href="#about">Software</a>
-                            <a href="#contact">ITUS</a>
                         </div>
+                      </div>
                     </div>
-
-                </div>
+                  </div>
+                
             </div>
     </section>
-    <script>
-        /* When the user clicks on the button, 
-        toggle between hiding and showing the dropdown content */
-        
-        
-
-       
-        function yFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
-        }
-        // Close the dropdown if the user clicks outside of it
-        window.onclick = function (event) {
-            if (!event.target.matches('.dropbtn')) {
-                var dropdows = document.getElementsByClassName("dropdown-content");
-                var i;
-                for (i = 0; i < dropdows.length; i++) {
-                    var openDropdon = dropdows[i];
-                    if (openDropdon.classList.contains('show')) {
-                        openDropdon.classList.remove('show');
-                    }
-                }
-            }
-        }
-
-        function myFunction() {
-            document.getElementById("myDropdow").classList.toggle("show");
-        }
-
-        // Close the dropdown if the user clicks outside of it
-        
-                  // Close the dropdown if the user clicks outside of it
-                  window.onclick = function (event) {
-                      if (!event.target.matches('.dropbtn')) {
-                          var dropdos = document.getElementsByClassName("dropdown-content");
-                          var i;
-                          for (i = 0; i < dropdos.length; i++) {
-                              var openDropdn = dropdos[i];
-                              if (openDropdn.classList.contains('show')) {
-                                  openDropdn.classList.remove('show');
-                              }
-                          }
-                      }
-                  }
-          
-                  
-          
-          
-                  // Close the dropdown if the user clicks outside of it
-                 
-              </script>
-              {% endblock content %}
+</div>
+{% endblock content %}
+         
               {% block scripts %}
-          
+              
               {% endblock scripts %}

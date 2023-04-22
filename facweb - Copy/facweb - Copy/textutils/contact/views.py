@@ -4,6 +4,7 @@ from fac.models import socialmediabar
 from fac.models import Navbar
 from fac.models import Navbar_icon
 from .models import getintouch_details
+from fac.models import socialmediabarmessage
 import datetime
 # Create your views here.
 def contact(request):
@@ -11,6 +12,7 @@ def contact(request):
     socialmedia_list = socialmediabar.objects.all()
     Navbar_list = Navbar.objects.all()
     Navbar_icon_list = Navbar_icon.objects.all()
+    socialmediabarmessage_list = socialmediabarmessage.objects.all()
 
     if request.method == "POST":
         context = {}
@@ -19,8 +21,8 @@ def contact(request):
         subject = request.POST['subject']
         message = request.POST['message']
 
-        contact_message=getintouch_details(Name=name,Email=email,Subject=subject,Message=message,date_time=datetime)
+        contact_message=getintouch_details(Name=name,Email=email,Subject=subject,Message=message)
         contact_message.save()
-        return render(request, "contact.html",{'socialmedia':socialmedia_list,'contact':contact_list,'navbar':Navbar_list,'Navbar_icon':Navbar_icon_list})
+        return render(request, "contact.html",{'socialmedia':socialmedia_list,'contact':contact_list,'navbar':Navbar_list,'Navbar_icon':Navbar_icon_list,'socialmediabarmessage':socialmediabarmessage_list})
     else:
-        return render(request, "contact.html",{'socialmedia':socialmedia_list,'contact':contact_list,'navbar':Navbar_list,'Navbar_icon':Navbar_icon_list})
+        return render(request, "contact.html",{'socialmedia':socialmedia_list,'contact':contact_list,'navbar':Navbar_list,'Navbar_icon':Navbar_icon_list,'socialmediabarmessage':socialmediabarmessage_list})
