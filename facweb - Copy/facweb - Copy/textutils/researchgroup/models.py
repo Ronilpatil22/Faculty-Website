@@ -6,9 +6,11 @@ class current_research(models.Model):
     Name = models.CharField(max_length=2000)
     Period = models.CharField(max_length=2000,blank=True)
     Area_of_research = models.CharField(max_length=2000,blank=True)
+    discipline = models.CharField(max_length=2000,blank=True)
     google_scholar_link = models.URLField()
     linkedin_link = models.URLField()
     mail = models.EmailField()
+
 
     def __str__(self):
         return self.Name

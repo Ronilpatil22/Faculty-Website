@@ -5,7 +5,6 @@ from fac.models import Navbar
 from fac.models import Navbar_icon
 from .models import getintouch_details
 from fac.models import socialmediabarmessage
-import datetime
 # Create your views here.
 def contact(request):
     contact_list = contacts.objects.all()
@@ -15,7 +14,6 @@ def contact(request):
     socialmediabarmessage_list = socialmediabarmessage.objects.all()
 
     if request.method == "POST":
-        context = {}
         name = request.POST['name']
         email = request.POST['email']
         subject = request.POST['subject']
@@ -26,3 +24,5 @@ def contact(request):
         return render(request, "contact.html",{'socialmedia':socialmedia_list,'contact':contact_list,'navbar':Navbar_list,'Navbar_icon':Navbar_icon_list,'socialmediabarmessage':socialmediabarmessage_list})
     else:
         return render(request, "contact.html",{'socialmedia':socialmedia_list,'contact':contact_list,'navbar':Navbar_list,'Navbar_icon':Navbar_icon_list,'socialmediabarmessage':socialmediabarmessage_list})
+    
+
