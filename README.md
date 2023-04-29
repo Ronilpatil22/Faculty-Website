@@ -5,3 +5,4 @@ To Run This Code on your system, Follow this steps->
 2)Go to textutils file and run pip install -r requirements.txt 
 3)After the technologies are installed run python manage.py makemigrations and python manage.py migrate
 4)Then run python manage.py runserver
+ 
