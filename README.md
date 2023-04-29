@@ -1,5 +1,5 @@
 # Faculty-Website
-This is a faculty website created for Dr.Puneet Gupta
+This is a faculty website created for Dr.Puneet Gupta<br />
 To Run This Code on your system, Follow this steps->
 1) Download The code and run on your local editor Or Open the command prompt.
 2)Go to textutils file and run pip install -r requirements.txt 
