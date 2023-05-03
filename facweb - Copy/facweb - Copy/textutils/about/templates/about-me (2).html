@@ -124,7 +124,7 @@
                           <div class="list-group" style="height: 500px;width: 50vw">
                             <a href="#" class="list-group-item active text-center">CURRENT EMPLOYMENT</a>
                             <a href="#" class="list-group-item text-center">PREVIOUS EMPLOYMENT</a>
-                            <a href="#" class="list-group-item text-center">PROJECTS</a>
+                            {% comment %} <a href="#" class="list-group-item text-center">PROJECTS</a> {% endcomment %}
                             <a href="#" class="list-group-item text-center">INTERNATIONAL JOURNALS</a>
                             <a href="#" class="list-group-item text-center">CONFERENCE PAPERS</a>
                             <a href="#" class="list-group-item text-center">PATENTS</a>
@@ -147,7 +147,7 @@
                               {%endfor%}
                           </div>
                   
-                          <div class="bhoechie-tab-content">
+                          {% comment %} <div class="bhoechie-tab-content">
                               <h5>PROJECTS</h5><br>
                               <ul>
                                 {%for projects in projects%}
@@ -159,7 +159,7 @@
                                 </li>
                                 {%endfor%}
                               </ul>
-                            </div>
+                            </div> {% endcomment %}
                           <div class="bhoechie-tab-content">
                               <h5>INTERNATIONAL JOURNALS(PUBLISHED)</h5><br>
                               {%for international_journal in international_journal%}
