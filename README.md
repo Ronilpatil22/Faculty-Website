@@ -41,7 +41,9 @@ Special thanks to Dr. Puneet Gupta for providing his guidance and content for th
 
 Contact<br />
 If you have any questions or concerns, please feel free to contact us at cse210001060@iiti.ac.in OR cse210001011@iiti.ac.in<br />
-
+cse210001012@iiti.ac.in
+<br />
+cse210001054@iiti.ac.in
 
 
 
